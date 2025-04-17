@@ -55,6 +55,21 @@
     a:hover {
       text-decoration: underline;
     }
+    .album {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .album img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 2px solid #333;
+    }
+    .album-description {
+      flex: 1;
+    }
   </style>
 </head>
 <body>
@@ -63,6 +78,58 @@
     <img src="/images/profile.jpg" alt="Profilbild">
     <h1>Psych3d3licX</h1>
   </div>
+
+  <section>
+    <h2>Diskografie</h2>
+
+    <div class="album">
+      <img src="/covers/chaotisch_psychotisch_cover.jpg" alt="Chaotisch Psychotisch">
+      <div class="album-description">
+        <h3>Chaotisch Psychotisch</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ein kraftvolles Werk voller Energie und Chaos.</p>
+      </div>
+    </div>
+
+    <div class="album">
+      <img src="/covers/erfolg_durch_substanz_cover.jpg" alt="Erfolg durch Substanz">
+      <div class="album-description">
+        <h3>Erfolg durch Substanz</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eine kritische Auseinandersetzung mit modernen Idealen.</p>
+      </div>
+    </div>
+
+    <div class="album">
+      <img src="/covers/intoxikation_für_mindestlohn_cover.jpg" alt="Intoxikation für Mindestlohn">
+      <div class="album-description">
+        <h3>Intoxikation für Mindestlohn</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Düstere Klangwelten und gesellschaftskritische Texte.</p>
+      </div>
+    </div>
+
+    <div class="album">
+      <img src="/covers/politikverdrossen_cover.jpg" alt="Politikverdrossen">
+      <div class="album-description">
+        <h3>Politikverdrossen</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Politisch aufgeladen mit einer Portion Sarkasmus.</p>
+      </div>
+    </div>
+
+    <div class="album">
+      <img src="/covers/total_breit_cover.jpg" alt="Total breit">
+      <div class="album-description">
+        <h3>Total breit</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ein experimenteller Trip durch Sound und Rausch.</p>
+      </div>
+    </div>
+
+    <div class="album">
+      <img src="/covers/narrengold_cover.jpg" alt="Narrengold">
+      <div class="album-description">
+        <h3>Narrengold</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ein emotionales Werk mit ironischem Unterton.</p>
+      </div>
+    </div>
+  </section>
 
   <section>
     <h2>Artist-Links</h2>
