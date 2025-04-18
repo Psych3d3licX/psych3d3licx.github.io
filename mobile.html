@@ -80,6 +80,15 @@
       line-height: 1.4;
     }
   </style>
+  <script>
+    if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      // Weiterleitung zur mobilen Version
+      window.location.href = "https://psych3d3licx.github.io/mobile.html";
+    } else {
+      // Weiterleitung zur Desktop-Version
+      window.location.href = "https://psych3d3licx.github.io/index.html";
+    }
+  </script>
 </head>
 <body>
   <header>
