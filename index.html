@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Psych3d3licX</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const currentPath = window.location.pathname;
+      if (isMobile && !currentPath.includes("mobile.html")) {
+        window.location.href = "mobile.html";
+      } else if (!isMobile && !currentPath.includes("index.html")) {
+        window.location.href = "index.html";
+      }
+    });
+  </script>
   <style>
     body {
       margin: 0;
