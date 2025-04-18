@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Psych3d3licX</title>
+  <script>
+  // Verhindert erneute Weiterleitung, wenn man bereits auf mobile.html ist
+  if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    // Nur umleiten, wenn Mobilgerät erkannt wird und nicht schon mobile.html geladen ist
+    if (isMobile) {
+      window.location.href = "mobile.html";
+    }
+  }
+  </script>
   <style>
     body {
       margin: 0;
