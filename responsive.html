@@ -85,10 +85,37 @@
 
     /* Mobile Overrides */
     @media (max-width: 768px) {
-      body {
+body {
         background-color: #000;
         color: #fff;
+
+      header h1 {
+        background-color: rgba(0,0,0,0.6);
+        padding: 1rem;
+        border-radius: 10px;
       }
+
+      .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        margin: -75px auto 1rem;
+        display: block;
+      }
+
+      .links, .socials {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+      }
+
+      .links a, .socials a {
+        color: #71427f;
+      }
+
+}
 
       header {
         text-align: center;
