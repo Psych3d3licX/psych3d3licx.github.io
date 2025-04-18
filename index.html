@@ -4,6 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Psych3d3licX</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const currentPath = window.location.pathname;
+
+      if (isMobile && !currentPath.includes("mobile.html")) {
+        window.location.href = "mobile.html";
+      } else if (!isMobile && !currentPath.includes("desktop.html")) {
+        window.location.href = "desktop.html";
+      }
+    });
+  </script>
   <style>
     body {
       margin: 0;
@@ -71,15 +83,6 @@
       flex: 1;
     }
   </style>
-  <script>
-    if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      // Weiterleitung zur mobilen Version
-      window.location.href = "https://psych3d3licx.github.io/mobile.html";
-    } else {
-      // Weiterleitung zur Desktop-Version
-      window.location.href = "https://psych3d3licx.github.io/index.html";
-    }
-  </script>
 </head>
 <body>
   <header></header>
