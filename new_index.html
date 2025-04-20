@@ -444,6 +444,11 @@
 
       countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
-  </script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const defaultTab = document.querySelector('.tab-button.active');
+    const defaultId = defaultTab && defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1];
+    if (defaultId) showTab(defaultId, defaultTab);
+  });
+</script>
 </body>
 </html>
