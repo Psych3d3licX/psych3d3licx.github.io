@@ -227,9 +227,26 @@
   }
   @media (max-width: 600px) {
     nav {
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      align-items: stretch;
     }
+    nav button {
+      width: 100%;
+      text-align: left;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-top: 1px solid #222;
+    }
+    .tab-button.active::after {
+      left: 10px;
+      transform: none;
+      width: 6px;
+      height: 100%;
+      bottom: 0;
+      top: 0;
+      background: #71427f;
+    }
+  }
     nav button {
       flex: 1 1 100%;
       padding: 12px;
