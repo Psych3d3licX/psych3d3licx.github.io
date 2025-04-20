@@ -188,6 +188,54 @@
     background-color: #111;
     padding: 20px;
   }
+  .presave-entry:hover, .album:hover {
+    box-shadow: 0 0 10px #71427f99;
+    transition: box-shadow 0.3s ease;
+  }
+  .tab-content > *:not(:last-child) {
+    border-left: 2px solid #71427f;
+    padding-left: 20px;
+  }
+  #artist p,
+  #dienste ul,
+  #kontakt p {
+    border-left: 2px solid #71427f;
+    padding-left: 20px;
+    margin-bottom: 40px;
+  }
+  .countdown-box {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #71427f;
+    border-radius: 12px;
+    background-color: rgba(17, 17, 17, 0.9);
+    box-shadow: 0 0 15px #71427f33;
+    backdrop-filter: blur(6px);
+  }
+  .countdown {
+    font-size: 2em;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .countdown-box p {
+    font-size: 0.95em;
+    color: #bbb;
+    margin: 0;
+  }
+  @media (max-width: 600px) {
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav button {
+      flex: 1 1 100%;
+      padding: 12px;
+      font-size: 1em;
+    }
+  }
 </style>
 
 </head>
@@ -197,11 +245,11 @@
     <img src="images/profile.jpg" alt="Profilbild">
     <h1>Psych3d3licX</h1>
   <nav>
-  <button class="tab-button active" onclick="showTab('presave', this)">Pre-Save</button>
-  <button class="tab-button" onclick="showTab('dienste', this)">Musikdienste</button>
-  <button class="tab-button" onclick="showTab('diskografie', this)">Diskografie</button>
-  <button class="tab-button" onclick="showTab('artist', this)">Artist</button>
-  <button class="tab-button" onclick="showTab('kontakt', this)">Kontakt</button>
+  <button class="tab-button active" onclick="showTab('presave', this)">⏳ Pre-Save</button>
+  <button class="tab-button" onclick="showTab('dienste', this)">🎶 Musikdienste</button>
+  <button class="tab-button" onclick="showTab('diskografie', this)">💿 Diskografie</button>
+  <button class="tab-button" onclick="showTab('artist', this)">👤 Artist</button>
+  <button class="tab-button" onclick="showTab('kontakt', this)">✉️ Kontakt</button>
 </nav>
 
 
@@ -209,7 +257,7 @@
   <section>
     <div id="presave" class="tab-content active">
         <h2 style="border: none;">Neuer Release kommt in:</h2>
-        <div style="width: 300px; margin: 0 auto; padding: 20px; border: 2px solid #333; border-radius: 10px;">
+        <div class="countdown-box">
           <div class="countdown" id="countdown" style="font-size: 2em;">Lade Countdown …</div>
           <p>Speichere jetzt vor – damit du's nicht verpasst!</p>
         </div>
