@@ -253,6 +253,28 @@
       font-size: 1em;
     }
   }
+  .tab-content.active::before {
+    content: "Aktiver Bereich";
+    display: block;
+    font-size: 0.85em;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .tab-content {
+    animation: fadeSlideIn 0.4s ease forwards;
+  }
+  @keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 </style>
 
 </head>
