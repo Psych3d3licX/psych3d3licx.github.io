@@ -512,7 +512,24 @@ footer a:hover {
   justify-content: center;
   margin-top: 20px;
 }
-  </style>
+  
+.tab-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.tab-icon {
+  font-size: 1.4em;
+  line-height: 1;
+}
+
+.tab-label {
+  font-size: 0.95em;
+}
+</style>
   <noscript>
    <style>
     nav,
@@ -526,7 +543,24 @@ footer a:hover {
       justify-content: center;
       margin-top: 20px;
     }
-   </style>
+   
+.tab-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.tab-icon {
+  font-size: 1.4em;
+  line-height: 1;
+}
+
+.tab-label {
+  font-size: 0.95em;
+}
+</style>
   </noscript>
  </head>
  <body>
@@ -544,25 +578,31 @@ footer a:hover {
    </noscript>
    <br/>
    <nav>
-    <button class="tab-button active" onclick="showTab('artist', this)">
-     👤 Artist
-    </button>
-    <button class="tab-button" onclick="showTab('diskografie', this)">
-     💿 Diskografie
-    </button>
-    <button class="tab-button" onclick="showTab('dienste', this)">
-     🎶 Musikdienste
-    </button>
-    <button class="tab-button" onclick="showTab('social', this)">
-     🌐 Social Media
-    </button>
-    <button class="tab-button" onclick="showTab('presave', this)">
-     ⏳ Pre-Save
-    </button>
-    <button class="tab-button" onclick="showTab('kontakt', this)">
-     ✉️ Kontakt
-    </button>
-   </nav>
+  <button class="tab-button active" onclick="showTab('artist', this)">
+    <span class="tab-icon">👤</span>
+    <span class="tab-label">Artist</span>
+  </button>
+  <button class="tab-button" onclick="showTab('diskografie', this)">
+    <span class="tab-icon">💿</span>
+    <span class="tab-label">Diskografie</span>
+  </button>
+  <button class="tab-button" onclick="showTab('dienste', this)">
+    <span class="tab-icon">🎶</span>
+    <span class="tab-label">Musikdienste</span>
+  </button>
+  <button class="tab-button" onclick="showTab('social', this)">
+    <span class="tab-icon">🌐</span>
+    <span class="tab-label">Social Media</span>
+  </button>
+  <button class="tab-button" onclick="showTab('presave', this)">
+    <span class="tab-icon">⏳</span>
+    <span class="tab-label">Pre-Save</span>
+  </button>
+  <button class="tab-button" onclick="showTab('kontakt', this)">
+    <span class="tab-icon">✉️</span>
+    <span class="tab-label">Kontakt</span>
+  </button>
+</nav>
    <div class="tab-content active" id="artist">
     <h2>
      ARTIST
