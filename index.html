@@ -60,23 +60,43 @@
       padding: 0 20px;
     }
     .tab-content {
-      display: none;
-    }
+  max-width: 1000px;
+  margin: 0 auto;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
     .tab-content.active {
-      display: block;
-    }
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
     .presave-entry {
+    border: 1px solid #333;
+    border-radius: 0;
+    background-color: #111;
+    padding: 20px;
+    max-width: 1000px;
     margin: 40px auto;
-    max-width: 320px;
+    text-align: center;
   }
+
   .presave-entry img {
-    width: 100%;
-    height: auto;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
     border: 2px solid #333;
     margin-bottom: 15px;
     display: block;
-    border-radius: 0;
+    border-radius: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: none;
   }
   .presave-entry a {
     display: inline-block;
@@ -99,8 +119,8 @@
     margin: 40px 0;
   }
   .album img {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
     border: 2px solid #333;
     margin-bottom: 15px;
@@ -184,9 +204,12 @@
   }
   .presave-entry {
     border: 1px solid #333;
-    border-radius: 8px;
+    border-radius: 0;
     background-color: #111;
     padding: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
   }
   .presave-entry:hover, .album:hover {
     box-shadow: 0 0 10px #71427f99;
@@ -196,12 +219,12 @@
     border-left: 2px solid #71427f;
     padding-left: 20px;
   }
-  #artist p,
-  #dienste ul,
-  #kontakt p {
+  .tab-content p, .tab-content ul {
     border-left: 2px solid #71427f;
     padding-left: 20px;
     margin-bottom: 40px;
+    font-size: 1em;
+    line-height: 1.6em;
   }
   .countdown-box {
     max-width: 320px;
@@ -275,6 +298,33 @@
       transform: translateY(0);
     }
   }
+  .tab-content h2,
+  .tab-content h3,
+  .tab-content a,
+  .tab-content li {
+    font-size: 1em;
+    line-height: 1.6em;
+    color: #ccc;
+  }
+  .tab-content h3 {
+    font-weight: bold;
+    color: #f0f0f0;
+    margin-bottom: 10px;
+  }
+  .tab-content ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .tab-content a {
+    text-decoration: none;
+    color: #71427f;
+  }
+  .tab-content a:hover {
+    text-decoration: underline;
+  }
+  body {
+    overflow-x: hidden;
+  }
 </style>
 
 </head>
@@ -292,16 +342,21 @@
   <button class="tab-button" onclick="showTab('kontakt', this)">✉️ Kontakt</button>
 </nav>
 
-  <section>
-<div id="artist" class="tab-content active">
+  <div id="artist" class="tab-content active">
   <p><strong>Zwischen Wahnsinn und Wahrheit – Psych3d3licX vertont die Abgründe unserer Zeit.</strong></p>
   <p>Mit scharfem Sarkasmus, poetischer Wut und schonungsloser Ehrlichkeit taucht Psych3d3licX tief hinab in das, was unsere Gesellschaft lieber verdrängt: Kontrollverlust, Konsumrausch, politische Entfremdung, medikamentöse Ausbeutung, religiöse Heuchelei und die melancholische Sehnsucht nach Sinn. Seine Musik ist kein Wohlfühlprodukt – sie ist ein Spiegel, eine Ohrfeige, ein rebellischer Aufschrei.</p>
   <p>In Konzeptalben wie „Chaotisch Psychotisch“, „Politikverdrossen“ oder „Narrengold“ entstehen dichte Klangwelten, in denen Drogenpsychosen, Machtkritik und gesellschaftliche Maskeraden aufeinandertreffen. Jedes Album ist ein thematischer Kosmos, jeder Track ein Miniatur-Manifest – mal roh und wütend, mal sarkastisch und verletzlich.</p>
   <p>Stilistisch bewegt sich Psych3d3licX zwischen Sprechgesang, industriallastigen Beats, glitch-infizierten Sounds und experimenteller Lyrik – unberechenbar, unbequem, unvergesslich. Wer hier zuhört, bekommt keine Antworten, sondern Fragen, die brennen. Keine Lösungen, sondern Realitäten, die weh tun. Keine Floskeln, sondern Kunst, die Haltung zeigt.</p>
   <p><strong>Psych3d3licX steht für Musik mit Substanz – im besten und im schlimmsten Sinne.</strong></p>
+
+  <p><br>Psych3d3licX macht Musik für die, die nicht wegsehen wollen.<br>
+  Zwischen Drogenwahnsinn, politischer Kritik und gesellschaftlichem Absturz erzählt er in kompromisslosen Konzeptalben von einer Welt am Limit – roh, poetisch, sarkastisch und radikal ehrlich. Jeder Track ist ein Schlag ins System.</p>
+
+  <p>Musik zwischen Wahnsinn, Systemkritik & Selbstzerstörung.<br>
+  Konzeptalben mit Haltung.<br>
+  Psych3d3licX | #KunstMitSubstanz</p>
 </div>
-</section>
-<section>
+
 <div id="dienste" class="tab-content">
   <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
     <li><a href="https://play.anghami.com/artist/23984583" target="_blank" class="music-link">Anghami</a></li>
@@ -370,33 +425,33 @@
   </div>
 </div>
 <div id="presave" class="tab-content">
-  <div class="countdown-box" id="countdown-wrapper">
-    <div class="countdown" id="countdown">⏳ Countdown läuft …</div>
-    <p>Speichere jetzt vor – damit du's nicht verpasst!</p>
+  <div id="countdown-wrapper" class="countdown-box">
+    <div id="countdown" class="countdown"></div>
+    <p id="countdown-message">Speichere jetzt vor – damit du's nicht verpasst!</p>
   </div>
   <div class="presave-entry">
     <img src="covers/narrengold_cover.jpg" alt="Narrengold">
-    <a href="https://distrokid.com/hyperfollow/psych3d3licx/narrengold-remastered" target="_blank">Pre-Save: Narrengold</a>
+    <a href="https://distrokid.com/hyperfollow/psych3d3licx/narrengold-remastered" target="_blank" class="music-link">Pre-Save: Narrengold</a>
   </div>
   <div class="presave-entry">
     <img src="covers/total_breit_cover.jpg" alt="Total breit">
-    <a href="https://distrokid.com/hyperfollow/psych3d3licx/total-breit-remastered" target="_blank">Pre-Save: Total breit</a>
+    <a href="https://distrokid.com/hyperfollow/psych3d3licx/total-breit-remastered" target="_blank" class="music-link">Pre-Save: Total breit</a>
   </div>
   <div class="presave-entry">
     <img src="covers/erfolg_durch_substanz_cover.jpg" alt="Erfolg durch Substanz">
-    <a href="https://distrokid.com/hyperfollow/psych3d3licx/erfolg-durch-substanz-remastered" target="_blank">Pre-Save: Erfolg durch Substanz</a>
+    <a href="https://distrokid.com/hyperfollow/psych3d3licx/erfolg-durch-substanz-remastered" target="_blank" class="music-link">Pre-Save: Erfolg durch Substanz</a>
   </div>
   <div class="presave-entry">
     <img src="covers/chaotisch_psychotisch_cover.jpg" alt="Chaotisch Psychotisch">
-    <a href="https://distrokid.com/hyperfollow/psych3d3licx/chaotisch-psychotisch-remastered" target="_blank">Pre-Save: Chaotisch Psychotisch</a>
+    <a href="https://distrokid.com/hyperfollow/psych3d3licx/chaotisch-psychotisch-remastered" target="_blank" class="music-link">Pre-Save: Chaotisch Psychotisch</a>
   </div>
   <div class="presave-entry">
     <img src="covers/intoxikation_für_mindestlohn_cover.jpg" alt="Intoxikation für Mindestlohn">
-    <a href="https://distrokid.com/hyperfollow/psych3d3licx/intoxikation-fr-mindestlohn-remastered" target="_blank">Pre-Save: Intoxikation für Mindestlohn</a>
+    <a href="https://distrokid.com/hyperfollow/psych3d3licx/intoxikation-fr-mindestlohn-remastered" target="_blank" class="music-link">Pre-Save: Intoxikation für Mindestlohn</a>
   </div>
   <div class="presave-entry">
     <img src="covers/politikverdrossen_cover.jpg" alt="Politikverdrossen">
-    <a href="https://distrokid.com/hyperfollow/psych3d3licx/politikverdrossen-remastered" target="_blank">Pre-Save: Politikverdrossen</a>
+    <a href="https://distrokid.com/hyperfollow/psych3d3licx/politikverdrossen-remastered" target="_blank" class="music-link">Pre-Save: Politikverdrossen</a>
   </div>
 </div>
 <div id="social" class="tab-content">
@@ -410,37 +465,41 @@
     <li><a href="https://www.youtube.com/@Psych3d3licX" target="_blank" class="music-link">YouTube</a></li>
   </ul>
 </div>
-<section>
 <div id="kontakt" class="tab-content">
   <p>Für Anfragen, Kooperationen oder Feedback erreichst du Psych3d3licX per Mail an:</p>
   <p><a href="mailto:psych3d3licx@gmail.com" class="music-link">psych3d3licx@gmail.com</a></p>
 </div>
-</section>
 <script>
-    function showTab(id, el) {
-      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-      el.classList.add('active');
+  function showTab(id, el) {
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    el.classList.add('active');
 
-      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-      const releaseDate = new Date("2025-04-21T01:00:00").getTime();
-    const countdownElement = document.getElementById("countdown");
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const defaultTab = document.querySelector('.tab-button.active');
+    const defaultId = defaultTab && defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1];
+    if (defaultId) showTab(defaultId, defaultTab);
+
+    const releaseDate = new Date("2025-04-21T01:00:00").getTime();
     const redirectURL = "https://open.spotify.com/intl-de/artist/3F4vfyQQDgEg3jF3qPdeDK";
-
     const wrapper = document.getElementById("countdown-wrapper");
-  const timer = setInterval(function() {
-  if (!document.getElementById("presave").classList.contains("active")) return;
+    const countdownElement = document.getElementById("countdown");
+    const message = document.getElementById("countdown-message");
+
+    const timer = setInterval(function() {
+      if (!document.getElementById("presave").classList.contains("active")) return;
       const now = new Date().getTime();
       const distance = releaseDate - now;
 
       if (distance < 0) {
-    clearInterval(timer);
-    countdownElement.innerHTML = "🎵 Jetzt verfügbar!";
-    wrapper.style.cursor = "pointer";
-    wrapper.onclick = () => window.open(redirectURL, '_blank');
-        
-        
+        message.textContent = "Jetzt auf Spotify streamen.";
+        countdownElement.innerHTML = "";
+        wrapper.onclick = () => window.open(redirectURL, '_blank');
+        wrapper.style.cursor = "pointer";
+        clearInterval(timer);
         return;
       }
 
@@ -449,14 +508,11 @@
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+      message.textContent = "Speichere jetzt vor – damit du's nicht verpasst!";
       countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    wrapper.onclick = null;
-    wrapper.style.cursor = "default";
+      wrapper.onclick = null;
+      wrapper.style.cursor = "default";
     }, 1000);
-    document.addEventListener("DOMContentLoaded", () => {
-    const defaultTab = document.querySelector('.tab-button.active');
-    const defaultId = defaultTab && defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1];
-    if (defaultId) showTab(defaultId, defaultTab);
   });
 </script>
 </body>
