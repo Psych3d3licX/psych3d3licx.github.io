@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="de">
-<head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Psych3d3licX – Navigation</title>
-<style>
-    html, body {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Psych3d3licX &ndash; Navigation
+  </title>
+  <style>
+   html, body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
@@ -14,7 +15,6 @@
       color: #f0f0f0;
       text-align: center;
     }
-    
     header {
       background: url('images/header.jpg') center/cover no-repeat;
       height: 300px;
@@ -22,24 +22,20 @@
       align-items: center;
       justify-content: center;
     }
-    
     .profile {
       text-align: center;
       margin-top: -80px;
     }
-    
     .profile img {
       width: 160px;
       height: 160px;
       border-radius: 50%;
       border: 4px solid #fff;
     }
-    
     h1 {
       margin: 10px 0 0 0;
       font-size: 2em;
     }
-    
     nav {
       display: flex;
       justify-content: center;
@@ -47,7 +43,6 @@
       border-top: 2px solid #333;
       border-bottom: 2px solid #333;
     }
-    
     nav button {
       background: none;
       border: none;
@@ -57,18 +52,15 @@
       cursor: pointer;
       transition: background 0.3s;
     }
-    
     nav button:hover, nav button.active {
       background-color: #222;
       color: #71427f;
     }
-    
     section {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
-    
     .tab-content {
   max-width: 1000px;
   margin: 0 auto;
@@ -80,14 +72,12 @@
   width: 100%;
   left: 0;
 }
-    
     .tab-content.active {
   display: block;
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: initial;
   position: relative;
 }
-    
     .presave-entry {
     border: 1px solid #333;
     border-radius: 0;
@@ -110,7 +100,6 @@
     margin-right: auto;
     box-shadow: none;
   }
-    
   .presave-entry a {
     display: inline-block;
     padding: 12px 24px;
@@ -122,18 +111,15 @@
     font-size: 1em;
     transition: background 0.3s;
   }
-    
   .presave-entry a:hover {
     background-color: #222;
   }
-    
   .album {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 40px 0;
   }
-    
   .album img {
     width: 500px;
     height: 500px;
@@ -142,28 +128,23 @@
     margin-bottom: 15px;
     border-radius: 0;
   }
-    
   .album-description {
     max-width: 600px;
     text-align: center;
   }
-    
   .album-description h3 {
     margin-bottom: 10px;
     font-size: 1.4em;
     color: #f0f0f0;
   }
-    
   .album-description p {
     font-size: 1em;
     line-height: 1.5em;
     color: #ccc;
   }
-    
   h2 {
     margin-bottom: 30px;
   }
-    
   .music-link {
     display: inline-block;
     padding: 10px 20px;
@@ -175,17 +156,14 @@
     font-size: 1em;
     transition: background 0.3s;
   }
-    
   .music-link:hover {
     background-color: #222;
   }
-    
   nav {
     position: sticky;
     top: 0;
     z-index: 100;
   }
-    
   .tab-content {
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -194,17 +172,14 @@
     width: 100%;
     left: 0;
   }
-    
   .tab-content.active {
     opacity: 1;
-    pointer-events: auto;
+    pointer-events: initial;
     position: relative;
   }
-    
   .tab-button {
     position: relative;
   }
-    
   .tab-button.active::after {
     content: "";
     position: absolute;
@@ -215,24 +190,20 @@
     height: 2px;
     background: #71427f;
   }
-    
   .tab-content > *:not(:last-child) {
     margin-bottom: 50px;
     padding-bottom: 30px;
     border-bottom: 1px dashed #444;
   }
-    
   .tab-content > *:last-child {
     margin-bottom: 40px;
   }
-    
   .tab-content > .album {
     border: 1px solid #333;
     border-radius: 8px;
     padding: 20px;
     background-color: #111;
   }
-    
   .presave-entry {
     border: 1px solid #333;
     border-radius: 0;
@@ -242,17 +213,14 @@
     margin: 40px auto;
     text-align: center;
   }
-    
   .presave-entry:hover, .album:hover {
     box-shadow: 0 0 10px #71427f99;
     transition: box-shadow 0.3s ease;
   }
-    
   .tab-content > *:not(:last-child) {
     border-left: 2px solid #71427f;
     padding-left: 20px;
   }
-    
   .tab-content p, .tab-content ul {
     border-left: 2px solid #71427f;
     padding-left: 20px;
@@ -260,7 +228,6 @@
     font-size: 1em;
     line-height: 1.6em;
   }
-    
   .countdown-box {
     max-width: 320px;
     margin: 0 auto;
@@ -271,7 +238,6 @@
     box-shadow: 0 0 15px #71427f33;
     backdrop-filter: blur(6px);
   }
-    
   .countdown {
     font-size: 2em;
     font-family: 'Courier New', monospace;
@@ -279,19 +245,16 @@
     color: #fff;
     margin-bottom: 10px;
   }
-    
   .countdown-box p {
     font-size: 0.95em;
     color: #bbb;
     margin: 0;
   }
-    
   @media (max-width: 600px) {
     nav {
       flex-direction: column;
       align-items: stretch;
     }
-      
     nav button {
       width: 100%;
       text-align: left;
@@ -299,7 +262,6 @@
       font-size: 1em;
       border-top: 1px solid #222;
     }
-      
     .tab-button.active::after {
       left: 10px;
       transform: none;
@@ -310,17 +272,16 @@
       background: #71427f;
     }
   }
-    
     nav button {
       flex: 1 1 100%;
       padding: 12px;
       font-size: 1em;
     }
 
+  
   .tab-content {
     animation: fadeSlideIn 0.4s ease forwards;
   }
-    
   @keyframes fadeSlideIn {
     0% {
       opacity: 0;
@@ -331,7 +292,6 @@
       transform: translateY(0);
     }
   }
-    
   .tab-content h2,
   .tab-content h3,
   .tab-content a,
@@ -340,27 +300,22 @@
     line-height: 1.6em;
     color: #ccc;
   }
-    
   .tab-content h3 {
     font-weight: bold;
     color: #f0f0f0;
     margin-bottom: 10px;
   }
-    
   .tab-content ul {
     list-style-type: none;
     padding-left: 0;
   }
-    
   .tab-content a {
     text-decoration: none;
     color: #71427f;
   }
-    
   .tab-content a:hover {
     text-decoration: underline;
   }
-    
   body {
     overflow-x: hidden;
   }
@@ -369,6 +324,7 @@
   border-left: 2px solid #71427f;
   padding-left: 20px;
 }
+
 
 .tab-content > .album {
   border-left: 2px solid #71427f;
@@ -401,6 +357,7 @@ nav button.active {
   box-shadow: 0 0 10px #71427f99;
 }
 
+
 /* Optimierte Tab-Styles: aktiver Tab stärker hervorgehoben, Hover auf inaktive Tabs dezenter */
 nav button {
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
@@ -423,9 +380,11 @@ nav button:not(.active):hover {
   opacity: 0.9;
 }
 
+
 #presave-content {
   display: none;
 }
+
 
 footer {
   background-color: #111;
@@ -447,6 +406,7 @@ footer a:hover {
   color: #a679b2;
 }
 
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -459,7 +419,6 @@ footer a:hover {
   justify-content: center;
   z-index: 9999;
 }
-    
 .modal-content {
   background-color: #111;
   color: #f0f0f0;
@@ -472,7 +431,6 @@ footer a:hover {
   box-shadow: 0 0 15px #71427f88;
   position: relative;
 }
-    
 .modal-close {
   position: absolute;
   top: 10px;
@@ -483,16 +441,17 @@ footer a:hover {
   border: none;
   cursor: pointer;
 }
-    
 .modal-close:hover {
   color: #fff;
 }
+
 
 .modal-content h2 {
   border-bottom: 2px solid #71427f;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
+
 
 .tab-button {
   background-color: #111;
@@ -508,32 +467,34 @@ footer a:hover {
   transition: all 0.3s ease;
   box-shadow: 0 0 8px #71427f55;
 }
-    
 .tab-button:hover {
   background-color: #1a1a1a;
   box-shadow: 0 0 12px #a679b2aa;
   transform: scale(1.03);
 }
 
+
 .tab-button {
   position: relative;
   z-index: 1;
 }
-    
 .tab-button:hover {
   z-index: 10;
 }
+
 
 .tab-button {
   text-align: center;
   justify-content: center;
 }
 
+
 .mail-warning {
   color: #71427f;
   font-size: 0.9em;
   margin-top: 10px;
 }
+
 
 .mail-warning-global {
   background-color: #1a1a1a;
@@ -545,15 +506,15 @@ footer a:hover {
   border-bottom: 1px solid #71427f;
 }
 
+
 #mail-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-</style>
-
-<noscript>
-  <style>
+  </style>
+  <noscript>
+   <style>
     nav,
     .tab-content,
     footer {
@@ -565,181 +526,377 @@ footer a:hover {
       justify-content: center;
       margin-top: 20px;
     }
-  </style>
-</noscript>
-
-</head>
-<body>
-<header></header>
-<div class="profile">
-<img alt="Profilbild" src="images/profile.jpg">
-<h1>Psych3d3licX</h1>
-<noscript><div class="mail-warning-global">
-    Diese Website benötigt JavaScript für die vollständige Funktion. Bitte aktiviere es, um Inhalte sehen zu können.
-  </div></noscript>
-
-<br>
-<nav>
-<button class="tab-button active" onclick="showTab('artist', this)">👤 Artist</button>
-<button class="tab-button" onclick="showTab('diskografie', this)">💿 Diskografie</button>
-<button class="tab-button" onclick="showTab('dienste', this)">🎶 Musikdienste</button>
-<button class="tab-button" onclick="showTab('social', this)">🌐 Social Media</button>
-<button class="tab-button" onclick="showTab('presave', this)">⏳ Pre-Save</button>
-<button class="tab-button" onclick="showTab('kontakt', this)">✉️ Kontakt</button>
-</nav>
-<div class="tab-content active" id="artist">
-<h2>ARTIST</h2>
-<p><strong>Zwischen Wahnsinn und Wahrheit – Psych3d3licX vertont die Abgründe unserer Zeit.</strong></p>
-<p>Mit scharfem Sarkasmus, poetischer Wut und schonungsloser Ehrlichkeit taucht Psych3d3licX tief hinab in das, was unsere Gesellschaft lieber verdrängt: Kontrollverlust, Konsumrausch, politische Entfremdung, medikamentöse Ausbeutung, religiöse Heuchelei und die melancholische Sehnsucht nach Sinn. Seine Musik ist kein Wohlfühlprodukt – sie ist ein Spiegel, eine Ohrfeige, ein rebellischer Aufschrei.</p>
-<p>In Konzeptalben wie „Chaotisch Psychotisch“, „Politikverdrossen“ oder „Narrengold“ entstehen dichte Klangwelten, in denen Drogenpsychosen, Machtkritik und gesellschaftliche Maskeraden aufeinandertreffen. Jedes Album ist ein thematischer Kosmos, jeder Track ein Miniatur-Manifest – mal roh und wütend, mal sarkastisch und verletzlich.</p>
-<p>Stilistisch bewegt sich Psych3d3licX zwischen Sprechgesang, industriallastigen Beats, glitch-infizierten Sounds und experimenteller Lyrik – unberechenbar, unbequem, unvergesslich. Wer hier zuhört, bekommt keine Antworten, sondern Fragen, die brennen. Keine Lösungen, sondern Realitäten, die weh tun. Keine Floskeln, sondern Kunst, die Haltung zeigt.</p>
-<p><strong>Psych3d3licX steht für Musik mit Substanz – im besten und im schlimmsten Sinne.</strong></p>
-<p><br>Psych3d3licX macht Musik für die, die nicht wegsehen wollen.<br>
-  Zwischen Drogenwahnsinn, politischer Kritik und gesellschaftlichem Absturz erzählt er in kompromisslosen Konzeptalben von einer Welt am Limit – roh, poetisch, sarkastisch und radikal ehrlich. Jeder Track ist ein Schlag ins System.</p>
-<p>Musik zwischen Wahnsinn, Systemkritik &amp; Selbstzerstörung.<br>
-  Konzeptalben mit Haltung.<br>
-  Psych3d3licX | #KunstMitSubstanz</p>
-</div>
-<div class="tab-content" id="dienste">
-<h2>MUSIKDIENSTE</h2>
-<ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-<li><a class="music-link" href="https://play.anghami.com/artist/23984583" target="_blank">Anghami</a></li>
-<li><a class="music-link" href="https://music.amazon.de/artists/B0F27XN1TM/psych3d3licx" target="_blank">Amazon Music</a></li>
-<li><a class="music-link" href="https://music.apple.com/de/artist/psych3d3licx/1804701619" target="_blank">Apple Music</a></li>
-<li><a class="music-link" href="https://audiomack.com/psych3d3licx" target="_blank">Audiomack</a></li>
-<li><a class="music-link" href="https://www.boomplay.com/artists/108249198" target="_blank">Boomplay</a></li>
-<li><a class="music-link" href="https://www.deezer.com/de/artist/312004951" target="_blank">Deezer</a></li>
-<li><a class="music-link" href="https://pandora.app.link/AEfb5H8xjSb" target="_blank">Pandora</a></li>
-<li><a class="music-link" href="https://open.spotify.com/intl-de/artist/3F4vfyQQDgEg3jF3qPdeDK" target="_blank">Spotify</a></li>
-<li><a class="music-link" href="https://tidal.com/artist/55856530" target="_blank">Tidal</a></li>
-<li><a class="music-link" href="https://music.youtube.com/channel/UCVp_VePvyTdT52g9b4jMUhQ" target="_blank">YouTube Music</a></li>
-</ul>
-</div>
-<div class="tab-content" id="diskografie">
-<h2>DISKOGRAFIE</h2>
-
-<div class="album">
-<img alt="Narrengold" src="covers/narrengold_cover.jpg">
-<div class="album-description">
-<h3>Narrengold</h3>
-<p>Willkommen in einer Welt, in der die Pest tanzt, der König plündert und der Priester lügt – Narrengold ist ein scharfzüngiges Konzeptalbum voller Sarkasmus, Spott und bitterer Wahrheiten. Zwischen Gossenhymne und Revoltenreim erzählen die Songs Geschichten aus einem finsteren Mittelalter, das weniger historisch als zutiefst gegenwärtig wirkt.</p>
-<p>Mit messerscharfen Texten und galligem Humor rechnet das Album mit Macht, Kirche, Gier und der Selbstverblendung des „niederen Volkes“ ab. Ob in der bitteren Anklage von „Sterbet ihr Maden“, der beißenden Parodie „Lasst uns tanzen“, dem höhnischen Prunk von „Der König sprach“ oder dem klirrend ehrlichen Trinklied „Wir trinken auf euch“ – Narrengold bedient sich der Sprache vergangener Jahrhunderte, um heutige Abgründe zu beleuchten.</p>
-<p>Narrengold ist kein romantisierender Mittelalter-Markt-Soundtrack, sondern ein sarkastisches Narrenspiegel-Panorama für die Gegenwart – roh, poetisch, unbequem.</p>
-</div>
-</div>
-<div class="album">
-<img alt="Total breit" src="covers/total_breit_cover.jpg">
-<div class="album-description">
-<h3>Total breit</h3>
-<p>„Total breit“ ist kein gewöhnliches Album – es ist ein wilder Trip durch die brüchige Psyche einer Generation im Nebel. Zwischen ironischem Eskapismus, poetischem Selbstverlust und bittersüßem Hedonismus entfaltet sich ein musikalisches Mosaik aus Rausch, Rebellion und Resignation.</p>
-<p>Das Album ist ein Spiegelkabinett des modernen Überdrusses – mal tanzbar, mal tragikomisch, immer ehrlich. „Total breit“ ist Soundtrack und Zustandsbeschreibung zugleich: ein melancholisches Manifest der Verlorenheit mit einem Augenzwinkern – irgendwo zwischen Absturz und Erleuchtung.</p>
-</div>
-</div>
-<div class="album">
-<img alt="Erfolg durch Substanz" src="covers/erfolg_durch_substanz_cover.jpg">
-<div class="album-description">
-<p><strong>Erfolg durch Substanz</strong><br>
-„Erfolg durch Substanz“ ist ein musikalischer Ritt durch die glitzernde Fassade der Leistungsgesellschaft – und ihren bitteren Preis. Zwischen Adrenalin und Erschöpfung erzählt das Album in kraftvollen Versen vom täglichen Kampf um Effizienz, Anerkennung und Selbstoptimierung. Der Soundtrack zu einem Leben auf Hochtouren, das sich zwischen Meeting-Marathons und Pillencocktails verliert.</p>
-
-<p>Mit scharfem Sarkasmus und düsterer Ehrlichkeit liefert das Album ein Portrait unserer Zeit: der Mensch als Maschine, getunt mit Pharma und getrieben von einem nie endenden Leistungsdruck. Die Beats pulsieren wie ein Herz unter Dauerstress, die Texte bohren sich direkt ins Nervensystem.</p>
-
-<p><em>„Erfolg durch Substanz“</em> ist nicht nur Musik – es ist eine Diagnose. Und ein Weckruf.</p>
-</div>
-</div>
-<div class="album">
-<img alt="Chaotisch Psychotisch" src="covers/chaotisch_psychotisch_cover.jpg">
-<div class="album-description">
-<p><strong>Chaotisch Psychotisch</strong><br>
-„Chaotisch Psychotisch“ ist kein gewöhnliches Album – es ist ein wilder, schonungsloser Abstieg in die zersplitterte Psyche einer zerrissenen Welt. Zwischen Wahnsinn, Drogenrausch und Gesellschaftskritik tanzt dieses Werk auf einem brennenden Drahtseil zwischen Realität und Illusion.</p>
-
-<p>Jeder Track ist ein Kapitel einer düsteren Reise: Vom titelgebenden Opener „Chaotisch Psychotisch“, der Stimmen im Kopf und eine fragmentierte Wahrnehmung schildert, über das bedrückend ehrliche „Scheiß Junkie“ bis hin zur gesellschaftskritischen Abrechnung „Verdrehte Welt“, die das Spiel mit Macht, Medien und Manipulation entlarvt.</p>
-
-<p>Lieder wie „Diagnose Psychose“ oder „Drogensoziopathie“ werfen einen intensiven Blick in den mentalen Abgrund – beklemmend, poetisch, brutal real. „Kokain“ und „Russisch Roulette“ erzählen vom Tanz mit der Selbstzerstörung, während „Za zdoróvje“ am Rand des Kontrollverlusts ein letztes Mal das Glas erhebt.</p>
-
-<p>Musikalisch wie textlich bleibt das Album kompromisslos: roh, verzerrt, direkt. Die Sprache ist hart, die Bilder surreal, die Emotionen unausweichlich. <em>„Chaotisch Psychotisch“</em> ist ein Spiegel für eine Welt im Ausnahmezustand – ein Manifest des Kontrollverlusts, vertont in acht Klanggewitter.</p>
-</div>
-</div>
-<div class="album">
-<img alt="Intoxikation für Mindestlohn" src="covers/intoxikation_für_mindestlohn_cover.jpg">
-<div class="album-description">
-<p><strong>Intoxikation für Mindestlohn</strong><br>
-Ein Soundtrack für eine Generation, die zwischen Fortschritt und Verwertung zerrieben wird.</p>
-
-<p>Dieses Album taucht ein in die düstere Realität klinischer Medikamentenstudien – gesehen durch die Augen eines Probanden, dessen Körper als Schlachtfeld für pharmazeutischen Fortschritt dient. Die Texte sind schonungslos, ironisch und von bitterer Poesie durchdrungen. Zwischen Infusionen, Bluttests und brennenden Organen entfaltet sich ein Porträt moderner Ausbeutung: eine Intoxikation, bezahlt mit Mindestlohn.</p>
-
-<p>Musikalisch oszilliert das Werk zwischen industriellen Beats, melancholischem Synth und rohem Sprechgesang – eine Mischung, so toxisch wie der Stoff, der darin thematisiert wird. Die Ästhetik ist roh, kantig, glitch-infiziert. Es kratzt, es zuckt, es lebt – aber wie lange noch?</p>
-
-<p><em>„Intoxikation für Mindestlohn“</em> ist kein Trostpflaster. Es ist ein Laborbericht aus der Unterseite des Fortschritts, eine künstlerische Vergiftung mit Langzeitwirkung.</p>
-</div>
-</div>
-<div class="album">
-<img alt="Politikverdrossen" src="covers/politikverdrossen_cover.jpg">
-<div class="album-description">
-<p><strong>Politikverdrossen</strong><br>
-Politikverdrossen – Ein musikalischer Aufschrei gegen eine kranke Ordnung</p>
-
-<p>Politikverdrossen ist kein gewöhnliches Album – es ist ein Manifest. Ein wütender, ehrlicher, manchmal zynischer Blick auf eine Welt im Zerfall. In 14 kraftvollen Tracks prallen politische Analyse, soziale Anklage und emotionale Ehrlichkeit aufeinander. Das Album ist eine Mischung aus lyrischer Radikalität und musikalischer Unnachgiebigkeit – irgendwo zwischen Wut und Hoffnung, Realität und Rebellion.</p>
-
-<p>Ob es um religiösen Fanatismus geht („Heilige Kriege“), den Zusammenbruch öffentlicher Ordnung („Panik in den Gassen“) oder das schleichende Gift der Korruption („Criminalia ad acta“) – jedes Stück reißt eine neue Wunde auf und blickt ohne Filter hinein.</p>
-
-<p>Mit Songs wie „Konservativ“ und „Friedrich Merz – ein schlechter Scherz“ wird die politische Elite gnadenlos zerlegt, während „Kirche ist scheiße“ und „Atheist“ mit religiösen Machtstrukturen und spiritueller Entfremdung abrechnen. Doch es bleibt nicht bei Kritik – Stücke wie „Revolution“ und „Slava Ukraini“ geben der Hoffnung eine Stimme, ohne naiv zu sein.</p>
-
-<p><em>Politikverdrossen</em> ist ein Album für alle, die sich nicht länger mit hohlen Phrasen, gebrochenen Versprechen und systematischer Ungerechtigkeit abfinden wollen. Es ist laut, unbequem und schmerzhaft wahr – ein akustischer Protest, der nachhallt.</p>
-</div>
-</div>
-</div>
-<div class="tab-content" id="presave">
-<h2>PRE-SAVE</h2>
-<div class="countdown-box" id="countdown-wrapper">
-<div class="countdown" id="countdown"></div>
-<p id="countdown-message">Speichere jetzt vor – damit du's nicht verpasst!</p>
-</div>
-<div id="presave-content">
-<div class="presave-entry">
-<img alt="Narrengold" src="covers/narrengold_cover.jpg">
-<a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/narrengold-remastered" target="_blank">Pre-Save: Narrengold</a>
-</div>
-<div class="presave-entry">
-<img alt="Total breit" src="covers/total_breit_cover.jpg">
-<a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/total-breit-remastered" target="_blank">Pre-Save: Total breit</a>
-</div>
-<div class="presave-entry">
-<img alt="Erfolg durch Substanz" src="covers/erfolg_durch_substanz_cover.jpg">
-<a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/erfolg-durch-substanz-remastered" target="_blank">Pre-Save: Erfolg durch Substanz</a>
-</div>
-<div class="presave-entry">
-<img alt="Chaotisch Psychotisch" src="covers/chaotisch_psychotisch_cover.jpg">
-<a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/chaotisch-psychotisch-remastered" target="_blank">Pre-Save: Chaotisch Psychotisch</a>
-</div>
-<div class="presave-entry">
-<img alt="Intoxikation für Mindestlohn" src="covers/intoxikation_für_mindestlohn_cover.jpg">
-<a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/intoxikation-fr-mindestlohn-remastered" target="_blank">Pre-Save: Intoxikation für Mindestlohn</a>
-</div>
-<div class="presave-entry">
-<img alt="Politikverdrossen" src="covers/politikverdrossen_cover.jpg">
-<a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/politikverdrossen-remastered" target="_blank">Pre-Save: Politikverdrossen</a>
-</div>
-</div>
-</div><!-- end presave-content -->
-<div class="tab-content" id="social">
-<h2>SOCIAL MEDIA</h2>
-<ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-<li><a class="music-link" href="https://bsky.app/profile/psych3d3licx.bsky.social" target="_blank">Bluesky</a></li>
-<li><a class="music-link" href="https://www.facebook.com/psych3d3licxmusic" target="_blank">Facebook</a></li>
-<li><a class="music-link" href="https://www.instagram.com/psych3d3licx/" target="_blank">Instagram</a></li>
-<li><a class="music-link" href="https://www.tiktok.com/@psych3d3licx" target="_blank">TikTok</a></li>
-<li><a class="music-link" href="https://whatsapp.com/channel/0029Vb5rs7P4IBhJ7Vf0sS3K" target="_blank">WhatsApp</a></li>
-<li><a class="music-link" href="https://x.com/Psych3d3licX" target="_blank">X</a></li>
-<li><a class="music-link" href="https://www.youtube.com/@Psych3d3licX" target="_blank">YouTube</a></li>
-</ul>
-</div>
-<div class="tab-content" id="kontakt">
-<h2>KONTAKT</h2>
-<p>Für Anfragen, Kooperationen oder Feedback erreichst du Psych3d3licX per Mail an:</p>
-<div id="mail-container"><span id="mail-link"></span></div>
-</div>
-<script>
-  function showTab(id, el) {
+   </style>
+  </noscript>
+ </head>
+ <body>
+  <header>
+  </header>
+  <div class="profile">
+   <img alt="Profilbild" src="images/profile.jpg"/>
+   <h1>
+    Psych3d3licX
+   </h1>
+   <noscript>
+    <div class="mail-warning-global">
+     Diese Website ben&ouml;tigt JavaScript f&uuml;r die vollst&auml;ndige Funktion. Bitte aktiviere es, um Inhalte sehen zu k&ouml;nnen.
+    </div>
+   </noscript>
+   <br/>
+   <nav>
+    <button class="tab-button active" onclick="showTab('artist', this)">
+     👤 Artist
+    </button>
+    <button class="tab-button" onclick="showTab('diskografie', this)">
+     💿 Diskografie
+    </button>
+    <button class="tab-button" onclick="showTab('dienste', this)">
+     🎶 Musikdienste
+    </button>
+    <button class="tab-button" onclick="showTab('social', this)">
+     🌐 Social Media
+    </button>
+    <button class="tab-button" onclick="showTab('presave', this)">
+     ⏳ Pre-Save
+    </button>
+    <button class="tab-button" onclick="showTab('kontakt', this)">
+     ✉️ Kontakt
+    </button>
+   </nav>
+   <div class="tab-content active" id="artist">
+    <h2>
+     ARTIST
+    </h2>
+    <p>
+     <strong>
+      Zwischen Wahnsinn und Wahrheit &ndash; Psych3d3licX vertont die Abgr&uuml;nde unserer Zeit.
+     </strong>
+    </p>
+    <p>
+     Mit scharfem Sarkasmus, poetischer Wut und schonungsloser Ehrlichkeit taucht Psych3d3licX tief hinab in das, was unsere Gesellschaft lieber verdr&auml;ngt: Kontrollverlust, Konsumrausch, politische Entfremdung, medikament&ouml;se Ausbeutung, religi&ouml;se Heuchelei und die melancholische Sehnsucht nach Sinn. Seine Musik ist kein Wohlf&uuml;hlprodukt &ndash; sie ist ein Spiegel, eine Ohrfeige, ein rebellischer Aufschrei.
+    </p>
+    <p>
+     In Konzeptalben wie &bdquo;Chaotisch Psychotisch&ldquo;, &bdquo;Politikverdrossen&ldquo; oder &bdquo;Narrengold&ldquo; entstehen dichte Klangwelten, in denen Drogenpsychosen, Machtkritik und gesellschaftliche Maskeraden aufeinandertreffen. Jedes Album ist ein thematischer Kosmos, jeder Track ein Miniatur-Manifest &ndash; mal roh und w&uuml;tend, mal sarkastisch und verletzlich.
+    </p>
+    <p>
+     Stilistisch bewegt sich Psych3d3licX zwischen Sprechgesang, industriallastigen Beats, glitch-infizierten Sounds und experimenteller Lyrik &ndash; unberechenbar, unbequem, unvergesslich. Wer hier zuh&ouml;rt, bekommt keine Antworten, sondern Fragen, die brennen. Keine L&ouml;sungen, sondern Realit&auml;ten, die weh tun. Keine Floskeln, sondern Kunst, die Haltung zeigt.
+    </p>
+    <p>
+     <strong>
+      Psych3d3licX steht f&uuml;r Musik mit Substanz &ndash; im besten und im schlimmsten Sinne.
+     </strong>
+    </p>
+    <p>
+     <br/>
+     Psych3d3licX macht Musik f&uuml;r die, die nicht wegsehen wollen.
+     <br/>
+     Zwischen Drogenwahnsinn, politischer Kritik und gesellschaftlichem Absturz erz&auml;hlt er in kompromisslosen Konzeptalben von einer Welt am Limit &ndash; roh, poetisch, sarkastisch und radikal ehrlich. Jeder Track ist ein Schlag ins System.
+    </p>
+    <p>
+     Musik zwischen Wahnsinn, Systemkritik &amp; Selbstzerst&ouml;rung.
+     <br/>
+     Konzeptalben mit Haltung.
+     <br/>
+     Psych3d3licX | #KunstMitSubstanz
+    </p>
+   </div>
+   <div class="tab-content" id="dienste">
+    <h2>
+     MUSIKDIENSTE
+    </h2>
+    <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+     <li>
+      <a class="music-link" href="https://play.anghami.com/artist/23984583" target="_blank">
+       Anghami
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://music.amazon.de/artists/B0F27XN1TM/psych3d3licx" target="_blank">
+       Amazon Music
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://music.apple.com/de/artist/psych3d3licx/1804701619" target="_blank">
+       Apple Music
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://audiomack.com/psych3d3licx" target="_blank">
+       Audiomack
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://www.boomplay.com/artists/108249198" target="_blank">
+       Boomplay
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://www.deezer.com/de/artist/312004951" target="_blank">
+       Deezer
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://pandora.app.link/AEfb5H8xjSb" target="_blank">
+       Pandora
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://open.spotify.com/intl-de/artist/3F4vfyQQDgEg3jF3qPdeDK" target="_blank">
+       Spotify
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://tidal.com/artist/55856530" target="_blank">
+       Tidal
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://music.youtube.com/channel/UCVp_VePvyTdT52g9b4jMUhQ" target="_blank">
+       YouTube Music
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="tab-content" id="diskografie">
+    <h2>
+     DISKOGRAFIE
+    </h2>
+    <div class="album">
+     <img alt="Narrengold" src="covers/narrengold_cover.jpg"/>
+     <div class="album-description">
+      <h3>
+       Narrengold
+      </h3>
+      <p>
+       Willkommen in einer Welt, in der die Pest tanzt, der K&ouml;nig pl&uuml;ndert und der Priester l&uuml;gt &ndash; Narrengold ist ein scharfz&uuml;ngiges Konzeptalbum voller Sarkasmus, Spott und bitterer Wahrheiten. Zwischen Gossenhymne und Revoltenreim erz&auml;hlen die Songs Geschichten aus einem finsteren Mittelalter, das weniger historisch als zutiefst gegenw&auml;rtig wirkt.
+      </p>
+      <p>
+       Mit messerscharfen Texten und galligem Humor rechnet das Album mit Macht, Kirche, Gier und der Selbstverblendung des &bdquo;niederen Volkes&ldquo; ab. Ob in der bitteren Anklage von &bdquo;Sterbet ihr Maden&ldquo;, der bei&szlig;enden Parodie &bdquo;Lasst uns tanzen&ldquo;, dem h&ouml;hnischen Prunk von &bdquo;Der K&ouml;nig sprach&ldquo; oder dem klirrend ehrlichen Trinklied &bdquo;Wir trinken auf euch&ldquo; &ndash; Narrengold bedient sich der Sprache vergangener Jahrhunderte, um heutige Abgr&uuml;nde zu beleuchten.
+      </p>
+      <p>
+       Narrengold ist kein romantisierender Mittelalter-Markt-Soundtrack, sondern ein sarkastisches Narrenspiegel-Panorama f&uuml;r die Gegenwart &ndash; roh, poetisch, unbequem.
+      </p>
+     </div>
+    </div>
+    <div class="album">
+     <img alt="Total breit" src="covers/total_breit_cover.jpg"/>
+     <div class="album-description">
+      <h3>
+       Total breit
+      </h3>
+      <p>
+       &bdquo;Total breit&ldquo; ist kein gew&ouml;hnliches Album &ndash; es ist ein wilder Trip durch die br&uuml;chige Psyche einer Generation im Nebel. Zwischen ironischem Eskapismus, poetischem Selbstverlust und bitters&uuml;&szlig;em Hedonismus entfaltet sich ein musikalisches Mosaik aus Rausch, Rebellion und Resignation.
+      </p>
+      <p>
+       Das Album ist ein Spiegelkabinett des modernen &Uuml;berdrusses &ndash; mal tanzbar, mal tragikomisch, immer ehrlich. &bdquo;Total breit&ldquo; ist Soundtrack und Zustandsbeschreibung zugleich: ein melancholisches Manifest der Verlorenheit mit einem Augenzwinkern &ndash; irgendwo zwischen Absturz und Erleuchtung.
+      </p>
+     </div>
+    </div>
+    <div class="album">
+     <img alt="Erfolg durch Substanz" src="covers/erfolg_durch_substanz_cover.jpg"/>
+     <div class="album-description">
+      <p>
+       <strong>
+        Erfolg durch Substanz
+       </strong>
+       <br/>
+       &bdquo;Erfolg durch Substanz&ldquo; ist ein musikalischer Ritt durch die glitzernde Fassade der Leistungsgesellschaft &ndash; und ihren bitteren Preis. Zwischen Adrenalin und Ersch&ouml;pfung erz&auml;hlt das Album in kraftvollen Versen vom t&auml;glichen Kampf um Effizienz, Anerkennung und Selbstoptimierung. Der Soundtrack zu einem Leben auf Hochtouren, das sich zwischen Meeting-Marathons und Pillencocktails verliert.
+      </p>
+      <p>
+       Mit scharfem Sarkasmus und d&uuml;sterer Ehrlichkeit liefert das Album ein Portrait unserer Zeit: der Mensch als Maschine, getunt mit Pharma und getrieben von einem nie endenden Leistungsdruck. Die Beats pulsieren wie ein Herz unter Dauerstress, die Texte bohren sich direkt ins Nervensystem.
+      </p>
+      <p>
+       <em>
+        &bdquo;Erfolg durch Substanz&ldquo;
+       </em>
+       ist nicht nur Musik &ndash; es ist eine Diagnose. Und ein Weckruf.
+      </p>
+     </div>
+    </div>
+    <div class="album">
+     <img alt="Chaotisch Psychotisch" src="covers/chaotisch_psychotisch_cover.jpg"/>
+     <div class="album-description">
+      <p>
+       <strong>
+        Chaotisch Psychotisch
+       </strong>
+       <br/>
+       &bdquo;Chaotisch Psychotisch&ldquo; ist kein gew&ouml;hnliches Album &ndash; es ist ein wilder, schonungsloser Abstieg in die zersplitterte Psyche einer zerrissenen Welt. Zwischen Wahnsinn, Drogenrausch und Gesellschaftskritik tanzt dieses Werk auf einem brennenden Drahtseil zwischen Realit&auml;t und Illusion.
+      </p>
+      <p>
+       Jeder Track ist ein Kapitel einer d&uuml;steren Reise: Vom titelgebenden Opener &bdquo;Chaotisch Psychotisch&ldquo;, der Stimmen im Kopf und eine fragmentierte Wahrnehmung schildert, &uuml;ber das bedr&uuml;ckend ehrliche &bdquo;Schei&szlig; Junkie&ldquo; bis hin zur gesellschaftskritischen Abrechnung &bdquo;Verdrehte Welt&ldquo;, die das Spiel mit Macht, Medien und Manipulation entlarvt.
+      </p>
+      <p>
+       Lieder wie &bdquo;Diagnose Psychose&ldquo; oder &bdquo;Drogensoziopathie&ldquo; werfen einen intensiven Blick in den mentalen Abgrund &ndash; beklemmend, poetisch, brutal real. &bdquo;Kokain&ldquo; und &bdquo;Russisch Roulette&ldquo; erz&auml;hlen vom Tanz mit der Selbstzerst&ouml;rung, w&auml;hrend &bdquo;Za zdor&oacute;vje&ldquo; am Rand des Kontrollverlusts ein letztes Mal das Glas erhebt.
+      </p>
+      <p>
+       Musikalisch wie textlich bleibt das Album kompromisslos: roh, verzerrt, direkt. Die Sprache ist hart, die Bilder surreal, die Emotionen unausweichlich.
+       <em>
+        &bdquo;Chaotisch Psychotisch&ldquo;
+       </em>
+       ist ein Spiegel f&uuml;r eine Welt im Ausnahmezustand &ndash; ein Manifest des Kontrollverlusts, vertont in acht Klanggewitter.
+      </p>
+     </div>
+    </div>
+    <div class="album">
+     <img alt="Intoxikation f&uuml;r Mindestlohn" src="covers/intoxikation_f&uuml;r_mindestlohn_cover.jpg"/>
+     <div class="album-description">
+      <p>
+       <strong>
+        Intoxikation f&uuml;r Mindestlohn
+       </strong>
+       <br/>
+       Ein Soundtrack f&uuml;r eine Generation, die zwischen Fortschritt und Verwertung zerrieben wird.
+      </p>
+      <p>
+       Dieses Album taucht ein in die d&uuml;stere Realit&auml;t klinischer Medikamentenstudien &ndash; gesehen durch die Augen eines Probanden, dessen K&ouml;rper als Schlachtfeld f&uuml;r pharmazeutischen Fortschritt dient. Die Texte sind schonungslos, ironisch und von bitterer Poesie durchdrungen. Zwischen Infusionen, Bluttests und brennenden Organen entfaltet sich ein Portr&auml;t moderner Ausbeutung: eine Intoxikation, bezahlt mit Mindestlohn.
+      </p>
+      <p>
+       Musikalisch oszilliert das Werk zwischen industriellen Beats, melancholischem Synth und rohem Sprechgesang &ndash; eine Mischung, so toxisch wie der Stoff, der darin thematisiert wird. Die &Auml;sthetik ist roh, kantig, glitch-infiziert. Es kratzt, es zuckt, es lebt &ndash; aber wie lange noch?
+      </p>
+      <p>
+       <em>
+        &bdquo;Intoxikation f&uuml;r Mindestlohn&ldquo;
+       </em>
+       ist kein Trostpflaster. Es ist ein Laborbericht aus der Unterseite des Fortschritts, eine k&uuml;nstlerische Vergiftung mit Langzeitwirkung.
+      </p>
+     </div>
+    </div>
+    <div class="album">
+     <img alt="Politikverdrossen" src="covers/politikverdrossen_cover.jpg"/>
+     <div class="album-description">
+      <p>
+       <strong>
+        Politikverdrossen
+       </strong>
+       <br/>
+       Politikverdrossen &ndash; Ein musikalischer Aufschrei gegen eine kranke Ordnung
+      </p>
+      <p>
+       Politikverdrossen ist kein gew&ouml;hnliches Album &ndash; es ist ein Manifest. Ein w&uuml;tender, ehrlicher, manchmal zynischer Blick auf eine Welt im Zerfall. In 14 kraftvollen Tracks prallen politische Analyse, soziale Anklage und emotionale Ehrlichkeit aufeinander. Das Album ist eine Mischung aus lyrischer Radikalit&auml;t und musikalischer Unnachgiebigkeit &ndash; irgendwo zwischen Wut und Hoffnung, Realit&auml;t und Rebellion.
+      </p>
+      <p>
+       Ob es um religi&ouml;sen Fanatismus geht (&bdquo;Heilige Kriege&ldquo;), den Zusammenbruch &ouml;ffentlicher Ordnung (&bdquo;Panik in den Gassen&ldquo;) oder das schleichende Gift der Korruption (&bdquo;Criminalia ad acta&ldquo;) &ndash; jedes St&uuml;ck rei&szlig;t eine neue Wunde auf und blickt ohne Filter hinein.
+      </p>
+      <p>
+       Mit Songs wie &bdquo;Konservativ&ldquo; und &bdquo;Friedrich Merz &ndash; ein schlechter Scherz&ldquo; wird die politische Elite gnadenlos zerlegt, w&auml;hrend &bdquo;Kirche ist schei&szlig;e&ldquo; und &bdquo;Atheist&ldquo; mit religi&ouml;sen Machtstrukturen und spiritueller Entfremdung abrechnen. Doch es bleibt nicht bei Kritik &ndash; St&uuml;cke wie &bdquo;Revolution&ldquo; und &bdquo;Slava Ukraini&ldquo; geben der Hoffnung eine Stimme, ohne naiv zu sein.
+      </p>
+      <p>
+       <em>
+        Politikverdrossen
+       </em>
+       ist ein Album f&uuml;r alle, die sich nicht l&auml;nger mit hohlen Phrasen, gebrochenen Versprechen und systematischer Ungerechtigkeit abfinden wollen. Es ist laut, unbequem und schmerzhaft wahr &ndash; ein akustischer Protest, der nachhallt.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="tab-content" id="presave">
+    <h2>
+     PRE-SAVE
+    </h2>
+    <div class="countdown-box" id="countdown-wrapper">
+     <div class="countdown" id="countdown">
+     </div>
+     <p id="countdown-message">
+      Speichere jetzt vor &ndash; damit du's nicht verpasst!
+     </p>
+    </div>
+    <div id="presave-content">
+     <div class="presave-entry">
+      <img alt="Narrengold" src="covers/narrengold_cover.jpg"/>
+      <a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/narrengold-remastered" target="_blank">
+       Pre-Save: Narrengold
+      </a>
+     </div>
+     <div class="presave-entry">
+      <img alt="Total breit" src="covers/total_breit_cover.jpg"/>
+      <a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/total-breit-remastered" target="_blank">
+       Pre-Save: Total breit
+      </a>
+     </div>
+     <div class="presave-entry">
+      <img alt="Erfolg durch Substanz" src="covers/erfolg_durch_substanz_cover.jpg"/>
+      <a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/erfolg-durch-substanz-remastered" target="_blank">
+       Pre-Save: Erfolg durch Substanz
+      </a>
+     </div>
+     <div class="presave-entry">
+      <img alt="Chaotisch Psychotisch" src="covers/chaotisch_psychotisch_cover.jpg"/>
+      <a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/chaotisch-psychotisch-remastered" target="_blank">
+       Pre-Save: Chaotisch Psychotisch
+      </a>
+     </div>
+     <div class="presave-entry">
+      <img alt="Intoxikation f&uuml;r Mindestlohn" src="covers/intoxikation_f&uuml;r_mindestlohn_cover.jpg"/>
+      <a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/intoxikation-fr-mindestlohn-remastered" target="_blank">
+       Pre-Save: Intoxikation f&uuml;r Mindestlohn
+      </a>
+     </div>
+     <div class="presave-entry">
+      <img alt="Politikverdrossen" src="covers/politikverdrossen_cover.jpg"/>
+      <a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/politikverdrossen-remastered" target="_blank">
+       Pre-Save: Politikverdrossen
+      </a>
+     </div>
+    </div>
+   </div>
+   <!-- end presave-content -->
+   <div class="tab-content" id="social">
+    <h2>
+     SOCIAL MEDIA
+    </h2>
+    <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+     <li>
+      <a class="music-link" href="https://bsky.app/profile/psych3d3licx.bsky.social" target="_blank">
+       Bluesky
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://www.facebook.com/psych3d3licxmusic" target="_blank">
+       Facebook
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://www.instagram.com/psych3d3licx/" target="_blank">
+       Instagram
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://www.tiktok.com/@psych3d3licx" target="_blank">
+       TikTok
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://whatsapp.com/channel/0029Vb5rs7P4IBhJ7Vf0sS3K" target="_blank">
+       WhatsApp
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://x.com/Psych3d3licX" target="_blank">
+       X
+      </a>
+     </li>
+     <li>
+      <a class="music-link" href="https://www.youtube.com/@Psych3d3licX" target="_blank">
+       YouTube
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="tab-content" id="kontakt">
+    <h2>
+     KONTAKT
+    </h2>
+    <p>
+     F&uuml;r Anfragen, Kooperationen oder Feedback erreichst du Psych3d3licX per Mail an:
+    </p>
+    <div id="mail-container">
+     <span id="mail-link">
+     </span>
+    </div>
+   </div>
+   <script>
+    function showTab(id, el) {
     document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
     el.classList.add('active');
 
@@ -786,37 +943,48 @@ Politikverdrossen – Ein musikalischer Aufschrei gegen eine kranke Ordnung</p>
       wrapper.style.cursor = "default";
     }, 1000);
   });
+
 document.addEventListener('keydown', function(event) {
   const modal = document.getElementById("legal-modal");
   if (event.key === "Escape" && modal.style.display === "flex") {
     closeModal();
   }
 });
+
+
 document.querySelectorAll('.legal-link').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     openModal(this.dataset.type);
   });
 });
-</script>
-    
-</div>
-<footer>
-  <p>&copy; 2025 Psych3d3licX. Alle Rechte vorbehalten.</p>
-  <p><a href="#" class="legal-link" data-type="impressum">Impressum</a> |
-    <a href="#" class="legal-link" data-type="datenschutz">Datenschutz</a>
-  </p>
-</footer>
-
-<div id="legal-modal" class="modal-overlay" style="display:none;">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <div id="modal-body"></div>
+   </script>
   </div>
-</div>
-
-<script>
-function openModal(contentId) {
+  <footer>
+   <p>
+    &copy; 2025 Psych3d3licX. Alle Rechte vorbehalten.
+   </p>
+   <p>
+    <a class="legal-link" data-type="impressum" href="#">
+     Impressum
+    </a>
+    |
+    <a class="legal-link" data-type="datenschutz" href="#">
+     Datenschutz
+    </a>
+   </p>
+  </footer>
+  <div class="modal-overlay" id="legal-modal" style="display:none;">
+   <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">
+     &times;
+    </button>
+    <div id="modal-body">
+    </div>
+   </div>
+  </div>
+  <script>
+   function openModal(contentId) {
   const modal = document.getElementById("legal-modal");
   const body = document.getElementById("modal-body");
   if (contentId === "impressum") {
@@ -862,16 +1030,16 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+
 document.querySelectorAll('.legal-link').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     openModal(this.dataset.type);
   });
 });
-</script>
-
-<script>
-  const coded = [
+  </script>
+  <script>
+   const coded = [
     112,115,121,99,104,51,100,51,108,105,99,120,64,103,109,97,105,108,46,99,111,109
   ];
   const decoded = coded.map(c => String.fromCharCode(c)).join("");
@@ -882,10 +1050,9 @@ document.querySelectorAll('.legal-link').forEach(link => {
   if (el && !isLikelyBot) {
     el.innerHTML = `<a class="music-link" href="mailto:${decoded}">${decoded}</a>`;
   }
-</script>
-
-<script>
-  (function() {
+  </script>
+  <script>
+   (function() {
     const coded = [112,115,121,99,104,51,100,51,108,105,99,120,64,103,109,97,105,108,46,99,111,109];
     const decoded = coded.map(c => String.fromCharCode(c)).join("");
     const ids = ["mail-link"];
@@ -899,6 +1066,6 @@ document.querySelectorAll('.legal-link').forEach(link => {
       });
     }
   })();
-</script>
-</body>
+  </script>
+ </body>
 </html>
