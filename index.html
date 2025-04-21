@@ -14,6 +14,7 @@
       color: #f0f0f0;
       text-align: center;
     }
+    
     header {
       background: url('images/header.jpg') center/cover no-repeat;
       height: 300px;
@@ -21,20 +22,24 @@
       align-items: center;
       justify-content: center;
     }
+    
     .profile {
       text-align: center;
       margin-top: -80px;
     }
+    
     .profile img {
       width: 160px;
       height: 160px;
       border-radius: 50%;
       border: 4px solid #fff;
     }
+    
     h1 {
       margin: 10px 0 0 0;
       font-size: 2em;
     }
+    
     nav {
       display: flex;
       justify-content: center;
@@ -42,6 +47,7 @@
       border-top: 2px solid #333;
       border-bottom: 2px solid #333;
     }
+    
     nav button {
       background: none;
       border: none;
@@ -51,15 +57,18 @@
       cursor: pointer;
       transition: background 0.3s;
     }
+    
     nav button:hover, nav button.active {
       background-color: #222;
       color: #71427f;
     }
+    
     section {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
+    
     .tab-content {
   max-width: 1000px;
   margin: 0 auto;
@@ -71,12 +80,14 @@
   width: 100%;
   left: 0;
 }
+    
     .tab-content.active {
   display: block;
   opacity: 1;
   pointer-events: auto;
   position: relative;
 }
+    
     .presave-entry {
     border: 1px solid #333;
     border-radius: 0;
@@ -99,6 +110,7 @@
     margin-right: auto;
     box-shadow: none;
   }
+    
   .presave-entry a {
     display: inline-block;
     padding: 12px 24px;
@@ -110,15 +122,18 @@
     font-size: 1em;
     transition: background 0.3s;
   }
+    
   .presave-entry a:hover {
     background-color: #222;
   }
+    
   .album {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 40px 0;
   }
+    
   .album img {
     width: 500px;
     height: 500px;
@@ -127,23 +142,28 @@
     margin-bottom: 15px;
     border-radius: 0;
   }
+    
   .album-description {
     max-width: 600px;
     text-align: center;
   }
+    
   .album-description h3 {
     margin-bottom: 10px;
     font-size: 1.4em;
     color: #f0f0f0;
   }
+    
   .album-description p {
     font-size: 1em;
     line-height: 1.5em;
     color: #ccc;
   }
+    
   h2 {
     margin-bottom: 30px;
   }
+    
   .music-link {
     display: inline-block;
     padding: 10px 20px;
@@ -155,14 +175,17 @@
     font-size: 1em;
     transition: background 0.3s;
   }
+    
   .music-link:hover {
     background-color: #222;
   }
+    
   nav {
     position: sticky;
     top: 0;
     z-index: 100;
   }
+    
   .tab-content {
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -171,14 +194,17 @@
     width: 100%;
     left: 0;
   }
+    
   .tab-content.active {
     opacity: 1;
     pointer-events: auto;
     position: relative;
   }
+    
   .tab-button {
     position: relative;
   }
+    
   .tab-button.active::after {
     content: "";
     position: absolute;
@@ -189,20 +215,24 @@
     height: 2px;
     background: #71427f;
   }
+    
   .tab-content > *:not(:last-child) {
     margin-bottom: 50px;
     padding-bottom: 30px;
     border-bottom: 1px dashed #444;
   }
+    
   .tab-content > *:last-child {
     margin-bottom: 40px;
   }
+    
   .tab-content > .album {
     border: 1px solid #333;
     border-radius: 8px;
     padding: 20px;
     background-color: #111;
   }
+    
   .presave-entry {
     border: 1px solid #333;
     border-radius: 0;
@@ -212,14 +242,17 @@
     margin: 40px auto;
     text-align: center;
   }
+    
   .presave-entry:hover, .album:hover {
     box-shadow: 0 0 10px #71427f99;
     transition: box-shadow 0.3s ease;
   }
+    
   .tab-content > *:not(:last-child) {
     border-left: 2px solid #71427f;
     padding-left: 20px;
   }
+    
   .tab-content p, .tab-content ul {
     border-left: 2px solid #71427f;
     padding-left: 20px;
@@ -227,6 +260,7 @@
     font-size: 1em;
     line-height: 1.6em;
   }
+    
   .countdown-box {
     max-width: 320px;
     margin: 0 auto;
@@ -237,6 +271,7 @@
     box-shadow: 0 0 15px #71427f33;
     backdrop-filter: blur(6px);
   }
+    
   .countdown {
     font-size: 2em;
     font-family: 'Courier New', monospace;
@@ -244,16 +279,19 @@
     color: #fff;
     margin-bottom: 10px;
   }
+    
   .countdown-box p {
     font-size: 0.95em;
     color: #bbb;
     margin: 0;
   }
+    
   @media (max-width: 600px) {
     nav {
       flex-direction: column;
       align-items: stretch;
     }
+      
     nav button {
       width: 100%;
       text-align: left;
@@ -261,6 +299,7 @@
       font-size: 1em;
       border-top: 1px solid #222;
     }
+      
     .tab-button.active::after {
       left: 10px;
       transform: none;
@@ -271,16 +310,17 @@
       background: #71427f;
     }
   }
+    
     nav button {
       flex: 1 1 100%;
       padding: 12px;
       font-size: 1em;
     }
 
-  
   .tab-content {
     animation: fadeSlideIn 0.4s ease forwards;
   }
+    
   @keyframes fadeSlideIn {
     0% {
       opacity: 0;
@@ -291,6 +331,7 @@
       transform: translateY(0);
     }
   }
+    
   .tab-content h2,
   .tab-content h3,
   .tab-content a,
@@ -299,22 +340,27 @@
     line-height: 1.6em;
     color: #ccc;
   }
+    
   .tab-content h3 {
     font-weight: bold;
     color: #f0f0f0;
     margin-bottom: 10px;
   }
+    
   .tab-content ul {
     list-style-type: none;
     padding-left: 0;
   }
+    
   .tab-content a {
     text-decoration: none;
     color: #71427f;
   }
+    
   .tab-content a:hover {
     text-decoration: underline;
   }
+    
   body {
     overflow-x: hidden;
   }
@@ -323,7 +369,6 @@
   border-left: 2px solid #71427f;
   padding-left: 20px;
 }
-
 
 .tab-content > .album {
   border-left: 2px solid #71427f;
@@ -356,7 +401,6 @@ nav button.active {
   box-shadow: 0 0 10px #71427f99;
 }
 
-
 /* Optimierte Tab-Styles: aktiver Tab stärker hervorgehoben, Hover auf inaktive Tabs dezenter */
 nav button {
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
@@ -379,13 +423,162 @@ nav button:not(.active):hover {
   opacity: 0.9;
 }
 
+#presave-content {
+  display: none;
+}
+
+footer {
+  background-color: #111;
+  color: #888;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 0.9em;
+  border-top: 1px solid #333;
+}
+
+footer a {
+  color: #71427f;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #a679b2;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+    
+.modal-content {
+  background-color: #111;
+  color: #f0f0f0;
+  padding: 30px;
+  border-radius: 8px;
+  border: 2px solid #71427f;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 0 15px #71427f88;
+  position: relative;
+}
+    
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  color: #aaa;
+  font-size: 1.5em;
+  border: none;
+  cursor: pointer;
+}
+    
+.modal-close:hover {
+  color: #fff;
+}
+
+.modal-content h2 {
+  border-bottom: 2px solid #71427f;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background-color: #111;
+  color: #71427f;
+  border: 1px solid #71427f;
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #71427f55;
+}
+    
+.tab-button:hover {
+  background-color: #1a1a1a;
+  box-shadow: 0 0 12px #a679b2aa;
+  transform: scale(1.03);
+}
+
+.tab-button {
+  position: relative;
+  z-index: 1;
+}
+    
+.tab-button:hover {
+  z-index: 10;
+}
+
+.tab-button {
+  text-align: center;
+  justify-content: center;
+}
+
+.mail-warning {
+  color: #71427f;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.mail-warning-global {
+  background-color: #1a1a1a;
+  color: #ff66cc;
+  text-align: center;
+  font-size: 0.95em;
+  padding: 10px 15px;
+  border-top: 1px solid #71427f;
+  border-bottom: 1px solid #71427f;
+}
+
+#mail-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 </style>
+
+<noscript>
+  <style>
+    nav,
+    .tab-content,
+    footer {
+      display: none !important;
+    }
+
+    #mail-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+</noscript>
+
 </head>
 <body>
 <header></header>
 <div class="profile">
 <img alt="Profilbild" src="images/profile.jpg">
 <h1>Psych3d3licX</h1>
+<noscript><div class="mail-warning-global">
+    Diese Website benötigt JavaScript für die vollständige Funktion. Bitte aktiviere es, um Inhalte sehen zu können.
+  </div></noscript>
+
+<br>
 <nav>
 <button class="tab-button active" onclick="showTab('artist', this)">👤 Artist</button>
 <button class="tab-button" onclick="showTab('diskografie', this)">💿 Diskografie</button>
@@ -445,35 +638,53 @@ nav button:not(.active):hover {
 <div class="album">
 <img alt="Erfolg durch Substanz" src="covers/erfolg_durch_substanz_cover.jpg">
 <div class="album-description">
-<h3>Erfolg durch Substanz</h3>
-<p>Ein Soundtrack der Selbstoptimierung – brutal, nüchtern, analytisch. „Erfolg durch Substanz“ führt durch Leistungsterror, Medikamentenmissbrauch und Kapitallogik. In kalten Synth-Flächen, straffen Rhythmen und klinischen Klangräumen entfaltet sich eine düstere Vision vom entmenschlichten Fortschritt.</p>
-<p>Zwischen Chemielyrik, Börsenslang und dystopischer Klarheit entsteht ein zynisches Protokoll der Entfremdung. Kein Lob auf Disziplin, sondern ein akustisches Psychogramm des durchgetakteten Wahnsinns.</p>
+<p><strong>Erfolg durch Substanz</strong><br>
+„Erfolg durch Substanz“ ist ein musikalischer Ritt durch die glitzernde Fassade der Leistungsgesellschaft – und ihren bitteren Preis. Zwischen Adrenalin und Erschöpfung erzählt das Album in kraftvollen Versen vom täglichen Kampf um Effizienz, Anerkennung und Selbstoptimierung. Der Soundtrack zu einem Leben auf Hochtouren, das sich zwischen Meeting-Marathons und Pillencocktails verliert.</p>
+
+<p>Mit scharfem Sarkasmus und düsterer Ehrlichkeit liefert das Album ein Portrait unserer Zeit: der Mensch als Maschine, getunt mit Pharma und getrieben von einem nie endenden Leistungsdruck. Die Beats pulsieren wie ein Herz unter Dauerstress, die Texte bohren sich direkt ins Nervensystem.</p>
+
+<p><em>„Erfolg durch Substanz“</em> ist nicht nur Musik – es ist eine Diagnose. Und ein Weckruf.</p>
 </div>
 </div>
 <div class="album">
 <img alt="Chaotisch Psychotisch" src="covers/chaotisch_psychotisch_cover.jpg">
 <div class="album-description">
-<h3>Chaotisch Psychotisch</h3>
-<p>Ein Album wie ein Nervenzusammenbruch: flackernd, zerstückelt, radikal ehrlich. Mit industrialnahen Beats, verzerrter Sprache und halluzinatorischer Bildsprache taucht Psych3d3licX in den psychotischen Abgrund – zwischen Wahn, Wahnsinn und Wahrheit.</p>
-<p>Keine Dramatisierung, kein Mitleid – nur die dokumentierte Zerrissenheit einer Realität, die sich selbst zerlegt.</p>
+<p><strong>Chaotisch Psychotisch</strong><br>
+„Chaotisch Psychotisch“ ist kein gewöhnliches Album – es ist ein wilder, schonungsloser Abstieg in die zersplitterte Psyche einer zerrissenen Welt. Zwischen Wahnsinn, Drogenrausch und Gesellschaftskritik tanzt dieses Werk auf einem brennenden Drahtseil zwischen Realität und Illusion.</p>
+
+<p>Jeder Track ist ein Kapitel einer düsteren Reise: Vom titelgebenden Opener „Chaotisch Psychotisch“, der Stimmen im Kopf und eine fragmentierte Wahrnehmung schildert, über das bedrückend ehrliche „Scheiß Junkie“ bis hin zur gesellschaftskritischen Abrechnung „Verdrehte Welt“, die das Spiel mit Macht, Medien und Manipulation entlarvt.</p>
+
+<p>Lieder wie „Diagnose Psychose“ oder „Drogensoziopathie“ werfen einen intensiven Blick in den mentalen Abgrund – beklemmend, poetisch, brutal real. „Kokain“ und „Russisch Roulette“ erzählen vom Tanz mit der Selbstzerstörung, während „Za zdoróvje“ am Rand des Kontrollverlusts ein letztes Mal das Glas erhebt.</p>
+
+<p>Musikalisch wie textlich bleibt das Album kompromisslos: roh, verzerrt, direkt. Die Sprache ist hart, die Bilder surreal, die Emotionen unausweichlich. <em>„Chaotisch Psychotisch“</em> ist ein Spiegel für eine Welt im Ausnahmezustand – ein Manifest des Kontrollverlusts, vertont in acht Klanggewitter.</p>
 </div>
 </div>
 <div class="album">
 <img alt="Intoxikation für Mindestlohn" src="covers/intoxikation_für_mindestlohn_cover.jpg">
 <div class="album-description">
-<h3>Intoxikation für Mindestlohn</h3>
-<p>Ein zynisches Album über pharmazeutische Ausbeutung und soziale Verwahrlosung. Die Beats kalt, die Stimmen nüchtern, die Texte wie Versuchsanordnungen. Zwischen Testsubjekt und Therapieprotokoll entfaltet sich ein dystopischer Trip durch Substanzmissbrauch als System.</p>
-<p>Ein Werk wie ein klinischer Bericht: dokumentarisch, verzweifelt, radikal.</p>
+<p><strong>Intoxikation für Mindestlohn</strong><br>
+Ein Soundtrack für eine Generation, die zwischen Fortschritt und Verwertung zerrieben wird.</p>
+
+<p>Dieses Album taucht ein in die düstere Realität klinischer Medikamentenstudien – gesehen durch die Augen eines Probanden, dessen Körper als Schlachtfeld für pharmazeutischen Fortschritt dient. Die Texte sind schonungslos, ironisch und von bitterer Poesie durchdrungen. Zwischen Infusionen, Bluttests und brennenden Organen entfaltet sich ein Porträt moderner Ausbeutung: eine Intoxikation, bezahlt mit Mindestlohn.</p>
+
+<p>Musikalisch oszilliert das Werk zwischen industriellen Beats, melancholischem Synth und rohem Sprechgesang – eine Mischung, so toxisch wie der Stoff, der darin thematisiert wird. Die Ästhetik ist roh, kantig, glitch-infiziert. Es kratzt, es zuckt, es lebt – aber wie lange noch?</p>
+
+<p><em>„Intoxikation für Mindestlohn“</em> ist kein Trostpflaster. Es ist ein Laborbericht aus der Unterseite des Fortschritts, eine künstlerische Vergiftung mit Langzeitwirkung.</p>
 </div>
 </div>
 <div class="album">
 <img alt="Politikverdrossen" src="covers/politikverdrossen_cover.jpg">
 <div class="album-description">
-<h3>Politikverdrossen</h3>
+<p><strong>Politikverdrossen</strong><br>
+Politikverdrossen – Ein musikalischer Aufschrei gegen eine kranke Ordnung</p>
+
 <p>Politikverdrossen ist kein gewöhnliches Album – es ist ein Manifest. Ein wütender, ehrlicher, manchmal zynischer Blick auf eine Welt im Zerfall. In 14 kraftvollen Tracks prallen politische Analyse, soziale Anklage und emotionale Ehrlichkeit aufeinander. Das Album ist eine Mischung aus lyrischer Radikalität und musikalischer Unnachgiebigkeit – irgendwo zwischen Wut und Hoffnung, Realität und Rebellion.</p>
+
 <p>Ob es um religiösen Fanatismus geht („Heilige Kriege“), den Zusammenbruch öffentlicher Ordnung („Panik in den Gassen“) oder das schleichende Gift der Korruption („Criminalia ad acta“) – jedes Stück reißt eine neue Wunde auf und blickt ohne Filter hinein.</p>
+
 <p>Mit Songs wie „Konservativ“ und „Friedrich Merz – ein schlechter Scherz“ wird die politische Elite gnadenlos zerlegt, während „Kirche ist scheiße“ und „Atheist“ mit religiösen Machtstrukturen und spiritueller Entfremdung abrechnen. Doch es bleibt nicht bei Kritik – Stücke wie „Revolution“ und „Slava Ukraini“ geben der Hoffnung eine Stimme, ohne naiv zu sein.</p>
-<p>Politikverdrossen ist ein Album für alle, die sich nicht länger mit hohlen Phrasen, gebrochenen Versprechen und systematischer Ungerechtigkeit abfinden wollen. Es ist laut, unbequem und schmerzhaft wahr – ein akustischer Protest, der nachhallt.</p>
+
+<p><em>Politikverdrossen</em> ist ein Album für alle, die sich nicht länger mit hohlen Phrasen, gebrochenen Versprechen und systematischer Ungerechtigkeit abfinden wollen. Es ist laut, unbequem und schmerzhaft wahr – ein akustischer Protest, der nachhallt.</p>
 </div>
 </div>
 </div>
@@ -483,6 +694,7 @@ nav button:not(.active):hover {
 <div class="countdown" id="countdown"></div>
 <p id="countdown-message">Speichere jetzt vor – damit du's nicht verpasst!</p>
 </div>
+<div id="presave-content">
 <div class="presave-entry">
 <img alt="Narrengold" src="covers/narrengold_cover.jpg">
 <a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/narrengold-remastered" target="_blank">Pre-Save: Narrengold</a>
@@ -508,6 +720,7 @@ nav button:not(.active):hover {
 <a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/politikverdrossen-remastered" target="_blank">Pre-Save: Politikverdrossen</a>
 </div>
 </div>
+</div><!-- end presave-content -->
 <div class="tab-content" id="social">
 <h2>SOCIAL MEDIA</h2>
 <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
@@ -523,7 +736,7 @@ nav button:not(.active):hover {
 <div class="tab-content" id="kontakt">
 <h2>KONTAKT</h2>
 <p>Für Anfragen, Kooperationen oder Feedback erreichst du Psych3d3licX per Mail an:</p>
-<p><a class="music-link" href="mailto:psych3d3licx@gmail.com">psych3d3licx@gmail.com</a></p>
+<div id="mail-container"><span id="mail-link"></span></div>
 </div>
 <script>
   function showTab(id, el) {
@@ -542,6 +755,7 @@ nav button:not(.active):hover {
     const releaseDate = new Date("2025-04-21T01:00:00").getTime();
     const redirectURL = "https://open.spotify.com/intl-de/artist/3F4vfyQQDgEg3jF3qPdeDK";
     const wrapper = document.getElementById("countdown-wrapper");
+    const presaveContent = document.getElementById("presave-content");
     const countdownElement = document.getElementById("countdown");
     const message = document.getElementById("countdown-message");
 
@@ -552,6 +766,7 @@ nav button:not(.active):hover {
 
       if (distance < 0) {
         message.textContent = "Jetzt auf Spotify streamen.";
+      presaveContent.style.display = "none";
         countdownElement.innerHTML = "";
         wrapper.onclick = () => window.open(redirectURL, '_blank');
         wrapper.style.cursor = "pointer";
@@ -565,11 +780,125 @@ nav button:not(.active):hover {
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       message.textContent = "Speichere jetzt vor – damit du's nicht verpasst!";
+      presaveContent.style.display = "block";
       countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
       wrapper.onclick = null;
       wrapper.style.cursor = "default";
     }, 1000);
   });
+document.addEventListener('keydown', function(event) {
+  const modal = document.getElementById("legal-modal");
+  if (event.key === "Escape" && modal.style.display === "flex") {
+    closeModal();
+  }
+});
+document.querySelectorAll('.legal-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    openModal(this.dataset.type);
+  });
+});
 </script>
-</div></body>
+    
+</div>
+<footer>
+  <p>&copy; 2025 Psych3d3licX. Alle Rechte vorbehalten.</p>
+  <p><a href="#" class="legal-link" data-type="impressum">Impressum</a> |
+    <a href="#" class="legal-link" data-type="datenschutz">Datenschutz</a>
+  </p>
+</footer>
+
+<div id="legal-modal" class="modal-overlay" style="display:none;">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+function openModal(contentId) {
+  const modal = document.getElementById("legal-modal");
+  const body = document.getElementById("modal-body");
+  if (contentId === "impressum") {
+    body.innerHTML = `
+<h2>Impressum</h2>
+<h3>Verantwortlich für den Inhalt nach §55 Abs. 2 RStV:</h3>
+<p>Psych3d3licX</p>
+<h3>Haftung für Inhalte</h3>
+<p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+<h3>Haftung für Links</h3>
+<p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.</p>
+<h3>Urheberrecht</h3>
+<p>Alle Inhalte dieser Website unterliegen dem deutschen Urheberrecht.</p>
+`;
+  } else if (contentId === "datenschutz") {
+    body.innerHTML = `
+<h2>Datenschutzerklärung</h2>
+<p>Diese Website erhebt und verarbeitet keine personenbezogenen Daten, außer durch Drittanbieter-Links (z. B. Spotify, YouTube).</p>
+<h3>Verantwortlicher</h3>
+<p>Psych3d3licX</p>
+<h3>Hosting und Zugriffsdaten</h3>
+<p>Der Hostinganbieter speichert ggf. Zugriffsdaten zur Sicherstellung des Betriebs.</p>
+<h3>Drittanbieter</h3>
+<p>Beim Klicken auf externe Links gelten deren Datenschutzrichtlinien.</p>
+<h3>Ihre Rechte</h3>
+<p>Auskunft, Löschung, Berichtigung – per Mail möglich.</p>
+`;
+  }
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  const modal = document.getElementById("legal-modal");
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+document.addEventListener('keydown', function(event) {
+  const modal = document.getElementById("legal-modal");
+  if (event.key === "Escape" && modal.style.display === "flex") {
+    closeModal();
+  }
+});
+
+document.querySelectorAll('.legal-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    openModal(this.dataset.type);
+  });
+});
+</script>
+
+<script>
+  const coded = [
+    112,115,121,99,104,51,100,51,108,105,99,120,64,103,109,97,105,108,46,99,111,109
+  ];
+  const decoded = coded.map(c => String.fromCharCode(c)).join("");
+
+  const isLikelyBot = /bot|crawl|spider|curl|wget|python|headless/i.test(navigator.userAgent);
+  const el = document.getElementById("mail-link");
+
+  if (el && !isLikelyBot) {
+    el.innerHTML = `<a class="music-link" href="mailto:${decoded}">${decoded}</a>`;
+  }
+</script>
+
+<script>
+  (function() {
+    const coded = [112,115,121,99,104,51,100,51,108,105,99,120,64,103,109,97,105,108,46,99,111,109];
+    const decoded = coded.map(c => String.fromCharCode(c)).join("");
+    const ids = ["mail-link"];
+    const isHuman = !/bot|crawl|spider|curl|wget|python|headless/i.test(navigator.userAgent);
+    if (isHuman) {
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.innerHTML = `<a class="music-link" href="mailto:${decoded}">${decoded}</a>`;
+        }
+      });
+    }
+  })();
+</script>
+</body>
 </html>
