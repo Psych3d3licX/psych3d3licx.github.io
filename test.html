@@ -289,6 +289,23 @@
         border-bottom: none;
         border-left: 6px solid #71427f;
       }
+      .popup-content {
+        max-width: 90vw;
+        padding: 20px 16px;
+        font-size: 0.95em;
+      }
+      .close-btn {
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+      }
+    }
+    .popup-modal {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .popup-modal.visible {
+      opacity: 1;
     }
     </style>
   </head>
@@ -766,13 +783,18 @@ document.querySelectorAll('.legal-link').forEach(link => {
 
   <script>
     function openPopup(type) {
+      const popup = document.getElementById('popup-' + type);
+      popup.style.display = 'flex';
+      requestAnimationFrame(() => popup.classList.add('visible'));
       document.body.style.overflow = 'hidden';
-      document.getElementById('popup-' + type).style.display = 'flex';
     }
 
     function closePopup() {
+      document.querySelectorAll('.popup-modal').forEach(p => {
+        p.classList.remove('visible');
+        setTimeout(() => p.style.display = 'none', 300); // entspricht der CSS-Transition
+      });
       document.body.style.overflow = 'auto';
-      document.querySelectorAll('.popup-modal').forEach(p => p.style.display = 'none');
     }
 
     document.addEventListener('keydown', function (event) {
