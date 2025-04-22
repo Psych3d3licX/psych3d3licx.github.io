@@ -731,10 +731,11 @@ document.querySelectorAll('.legal-link').forEach(link => {
     </p>
   </footer>
 
-  <div class="popup-modal" id="popup-impressum">
+  <!-- Impressum-Popup -->
+  <div class="popup-modal" id="popup-impressum" role="dialog" aria-modal="true" aria-labelledby="impressum-title">
     <div class="popup-content">
-      <button class="close-btn" onclick="closePopup()">&times;</button>
-      <h2>Impressum</h2>
+      <button class="close-btn" onclick="closePopup()" aria-label="Schließen">&times;</button>
+      <h2 id="impressum-title">Impressum</h2>
       <h3>Verantwortlich f&uuml;r den Inhalt nach &sect;55 Abs. 2 RStV:</h3>
       <p>Psych3d3licX</p>
       <h3>Haftung f&uuml;r Inhalte</h3>
@@ -746,10 +747,11 @@ document.querySelectorAll('.legal-link').forEach(link => {
     </div>
   </div>
 
-  <div class="popup-modal" id="popup-datenschutz">
+  <!-- Datenschutz-Popup -->
+  <div class="popup-modal" id="popup-datenschutz" role="dialog" aria-modal="true" aria-labelledby="datenschutz-title">
     <div class="popup-content">
-      <button class="close-btn" onclick="closePopup()">&times;</button>
-      <h2>Datenschutzerkl&auml;rung</h2>
+      <button class="close-btn" onclick="closePopup()" aria-label="Schließen">&times;</button>
+      <h2 id="datenschutz-title">Datenschutzerkl&auml;rung</h2>
       <p>Diese Website erhebt und verarbeitet keine personenbezogenen Daten, au&szlig;er durch Drittanbieter-Links (z. B. Spotify, YouTube).</p>
       <h3>Verantwortlicher</h3>
       <p>Psych3d3licX</p>
@@ -761,6 +763,7 @@ document.querySelectorAll('.legal-link').forEach(link => {
       <p>Auskunft, L&ouml;schung, Berichtigung &ndash; per Mail m&ouml;glich.</p>
     </div>
   </div>
+
   <script>
     function openPopup(type) {
       document.body.style.overflow = 'hidden';
@@ -778,21 +781,8 @@ document.querySelectorAll('.legal-link').forEach(link => {
       }
     });
   </script>
-  <script>
-   const coded = [
-    112,115,121,99,104,51,100,51,108,105,99,120,64,103,109,97,105,108,46,99,111,109
-  ];
-  const decoded = coded.map(c => String.fromCharCode(c)).join("");
-
-  const isLikelyBot = /bot|crawl|spider|curl|wget|python|headless/i.test(navigator.userAgent);
-  const el = document.getElementById("mail-link");
-
-  if (el && !isLikelyBot) {
-    el.innerHTML = `<a class="music-link" href="mailto:${decoded}">${decoded}</a>`;
-  }
-  </script>
-  <script>
-   (function() {
+<script>
+  (function() {
     const coded = [112,115,121,99,104,51,100,51,108,105,99,120,64,103,109,97,105,108,46,99,111,109];
     const decoded = coded.map(c => String.fromCharCode(c)).join("");
     const ids = ["mail-link"];
@@ -806,5 +796,5 @@ document.querySelectorAll('.legal-link').forEach(link => {
       });
     }
   })();
-  </script>
+</script>
 </html>
