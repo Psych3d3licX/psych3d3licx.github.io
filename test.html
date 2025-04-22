@@ -239,20 +239,25 @@
         align-items: center;
         padding: 20px;
         overflow-y: auto;
+        box-sizing: border-box;
+        transition: opacity 0.3s ease;
+        opacity: 0;
       }
       .popup-content {
+        position: relative;
         background: #111;
         border: 1px solid #71427f;
         border-radius: 12px;
         padding: 30px;
         max-width: 600px;
         width: 100%;
+        margin: 0 auto;
         color: #fff;
         text-align: center;
         box-shadow: 0 0 20px #71427f99;
-        position: relative;
         max-height: 90vh;
         overflow-y: auto;
+        box-sizing: border-box;
       }
       .popup-content h2 {
         margin-top: 0;
@@ -265,14 +270,14 @@
         margin: 10px 0;
       }
       .close-btn {
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 28px;
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
       }
       .close-btn:hover {
         color: #ccc;
@@ -293,22 +298,6 @@
         border-bottom: none;
         border-left: 6px solid #71427f;
       }
-      .popup-content {
-        width: 100%;
-        max-width: 90vw;
-        padding: 20px 16px;
-        font-size: 0.95em;
-        box-sizing: border-box;
-      }
-      .close-btn {
-        top: 15px;
-        right: 15px;
-        font-size: 24px;
-      }
-    }
-    .popup-modal {
-      opacity: 0;
-      transition: opacity 0.3s ease;
     }
     .popup-modal.visible {
       opacity: 1;
@@ -798,7 +787,7 @@ document.querySelectorAll('.legal-link').forEach(link => {
     function closePopup() {
       document.querySelectorAll('.popup-modal').forEach(p => {
         p.classList.remove('visible');
-        setTimeout(() => p.style.display = 'none', 300); // entspricht der CSS-Transition
+        setTimeout(() => p.style.display = 'none', 300);
       });
       document.body.style.overflow = 'auto';
     }
