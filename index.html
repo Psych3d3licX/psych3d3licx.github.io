@@ -4,314 +4,9 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Psych3d3licX &ndash; #KunstMitSubstanz
+   Psych3d3licX – #KunstMitSubstanz
   </title>
-  <style>
-   html, body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #0e0e0e;
-        color: #f0f0f0;
-        text-align: center;
-        overflow-x: hidden;
-      }
-      img, iframe, video {
-        max-width: 100%;
-        height: auto;
-      }
-      header {
-        background: url('images/header.jpg') center/cover no-repeat;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .profile {
-        text-align: center;
-        margin-top: -80px;
-      }
-      .profile img {
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        border: 4px solid #fff;
-      }
-      h1 {
-        margin: 10px 0 0 0;
-        font-size: 2em;
-      }
-      nav {
-        display: flex;
-        justify-content: center;
-        background-color: #111;
-        border-top: 2px solid #333;
-        border-bottom: 2px solid #333;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
-      section {
-        max-width: 1000px;
-        margin: 40px auto;
-        padding: 0 20px;
-      }
-      .content-block {
-        margin-bottom: 50px;
-        padding-bottom: 30px;
-        border-bottom: 1px dashed #444;
-        border-left: 2px solid #71427f;
-        padding-left: 20px;
-      }
-      .tab-content {
-        max-width: 1000px;
-        margin: 0 auto;
-        display: none;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-        pointer-events: none;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        animation: fadeSlideIn 0.4s ease forwards;
-      }
-      .tab-content.active {
-        display: block;
-        opacity: 1;
-        pointer-events: initial;
-        position: relative;
-      }
-      .presave-entry {
-        border: 1px solid #333;
-        border-radius: 0;
-        background-color: #111;
-        padding: 20px;
-        max-width: 1000px;
-        margin: 40px auto;
-        text-align: center;
-      }
-      .presave-entry img,
-      .album img {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-        object-fit: cover;
-        border: 2px solid #333;
-        margin-bottom: 15px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 0 !important;
-        box-shadow: none;
-      }
-      .presave-entry a,
-      .music-link {
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #111;
-        border: 1px solid #444;
-        border-radius: 8px;
-        color: #71427f;
-        text-decoration: none;
-        font-size: 1em;
-        transition: background 0.3s;
-      }
-      .presave-entry a:hover,
-      .music-link:hover {
-        background-color: #222;
-      }
-      .album {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 40px 0;
-      }
-      .album-description {
-        max-width: 600px;
-        text-align: center;
-      }
-      .album-description h3 {
-        margin-bottom: 10px;
-        font-size: 1.4em;
-        color: #f0f0f0;
-      }
-      .album-description p {
-        font-size: 1em;
-        line-height: 1.5em;
-        color: #ccc;
-      }
-      h2 {
-        margin-bottom: 30px;
-      }
-      .tab-button {
-        background-color: #111;
-        color: #71427f;
-        border: 1px solid #71427f;
-        border-radius: 12px;
-        padding: 12px 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        font-weight: 600;
-        font-size: 1em;
-        position: relative;
-        z-index: 1;
-        text-align: center;
-        transition: all 0.3s ease;
-        box-shadow: 0 0 8px #71427f55;
-      }
-      .tab-button:hover {
-        background-color: #1a1a1a;
-        box-shadow: 0 0 12px #a679b2aa;
-        transform: scale(1.03);
-        z-index: 10;
-      }
-      .tab-button.active {
-        background-color: #222;
-        font-weight: bold;
-        border-bottom: 2px solid #71427f;
-      }
-      .tab-content > *:not(:last-child) {
-        margin-bottom: 50px;
-        padding-bottom: 30px;
-        border-bottom: 1px dashed #444;
-        border-left: 2px solid #71427f;
-        padding-left: 20px;
-      }
-      .presave-entry:hover,
-      .album:hover {
-        box-shadow: 0 0 10px #71427f99;
-        transition: box-shadow 0.3s ease;
-      }
-      .countdown-box {
-        max-width: 320px;
-        margin: 0 auto;
-        padding: 20px;
-        border: 2px solid #71427f;
-        border-radius: 12px;
-        background-color: rgba(17, 17, 17, 0.9);
-        box-shadow: 0 0 15px #71427f33;
-        backdrop-filter: blur(6px);
-      }
-      .countdown {
-        font-size: 2em;
-        font-family: 'Courier New', monospace;
-        font-weight: bold;
-        color: #fff;
-        margin-bottom: 10px;
-      }
-      .countdown-box p {
-        font-size: 0.95em;
-        color: #bbb;
-        margin: 0;
-      }
-      @keyframes fadeSlideIn {
-        0% {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      footer {
-        background-color: #111;
-        color: #888;
-        text-align: center;
-        padding: 30px 10px;
-        font-size: 0.9em;
-        border-top: 1px solid #333;
-      }
-      footer a {
-        color: #71427f;
-        text-decoration: none;
-        margin: 0 8px;
-        transition: color 0.3s;
-        cursor: pointer;
-      }
-      footer a:hover {
-        color: #a679b2;
-      }
-      .popup-modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(6px);
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        overflow-y: auto;
-        box-sizing: border-box;
-        transition: opacity 0.3s ease;
-        opacity: 0;
-      }
-      .popup-content {
-        position: relative;
-        background: #111;
-        border: 1px solid #71427f;
-        border-radius: 12px;
-        padding: 30px;
-        max-width: 600px;
-        width: 100%;
-        margin: 0 auto;
-        color: #fff;
-        text-align: center;
-        box-shadow: 0 0 20px #71427f99;
-        max-height: 90vh;
-        overflow-y: auto;
-        box-sizing: border-box;
-      }
-      .popup-content h2 {
-        margin-top: 0;
-      }
-        .popup-content h3 {
-        margin-bottom: 8px;
-        margin-top: 20px;
-      }
-      .popup-content p {
-        margin: 10px 0;
-      }
-      .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 24px;
-      cursor: pointer;
-      }
-      .close-btn:hover {
-        color: #ccc;
-      }
-      @media (max-width: 600px) {
-        nav {
-          flex-direction: column;
-          align-items: stretch;
-        }
-      .tab-button {
-        width: 100%;
-        justify-content: flex-start;
-        padding: 12px 20px;
-        font-size: 1em;
-        border-top: 1px solid #222;
-      }
-      .tab-button.active {
-        border-bottom: none;
-        border-left: 6px solid #71427f;
-      }
-    }
-    .popup-modal.visible {
-      opacity: 1;
-    }
-  </style>
+  <link href="style.css" rel="stylesheet"/>
  </head>
  <body>
   <header>
@@ -323,7 +18,7 @@
    </h1>
    <noscript>
     <div class="mail-warning-global">
-     Diese Website ben&ouml;tigt JavaScript f&uuml;r die vollst&auml;ndige Funktion. Bitte aktiviere es, um Inhalte sehen zu k&ouml;nnen.
+     Diese Website benötigt JavaScript für die vollständige Funktion. Bitte aktiviere es, um Inhalte sehen zu können.
     </div>
    </noscript>
    <br/>
@@ -353,31 +48,31 @@
     </h2>
     <p class="content-block">
      <strong>
-      Zwischen Wahnsinn und Wahrheit &ndash; Psych3d3licX vertont die Abgr&uuml;nde unserer Zeit.
+      Zwischen Wahnsinn und Wahrheit – Psych3d3licX vertont die Abgründe unserer Zeit.
      </strong>
     </p>
     <p class="content-block">
-     Mit scharfem Sarkasmus, poetischer Wut und schonungsloser Ehrlichkeit taucht Psych3d3licX tief hinab in das, was unsere Gesellschaft lieber verdr&auml;ngt: Kontrollverlust, Konsumrausch, politische Entfremdung, medikament&ouml;se Ausbeutung, religi&ouml;se Heuchelei und die melancholische Sehnsucht nach Sinn. Seine Musik ist kein Wohlf&uuml;hlprodukt &ndash; sie ist ein Spiegel, eine Ohrfeige, ein rebellischer Aufschrei.
+     Mit scharfem Sarkasmus, poetischer Wut und schonungsloser Ehrlichkeit taucht Psych3d3licX tief hinab in das, was unsere Gesellschaft lieber verdrängt: Kontrollverlust, Konsumrausch, politische Entfremdung, medikamentöse Ausbeutung, religiöse Heuchelei und die melancholische Sehnsucht nach Sinn. Seine Musik ist kein Wohlfühlprodukt – sie ist ein Spiegel, eine Ohrfeige, ein rebellischer Aufschrei.
     </p>
     <p class="content-block">
-     In Konzeptalben wie &bdquo;Chaotisch Psychotisch&ldquo;, &bdquo;Politikverdrossen&ldquo; oder &bdquo;Narrengold&ldquo; entstehen dichte Klangwelten, in denen Drogenpsychosen, Machtkritik und gesellschaftliche Maskeraden aufeinandertreffen. Jedes Album ist ein thematischer Kosmos, jeder Track ein Miniatur-Manifest &ndash; mal roh und w&uuml;tend, mal sarkastisch und verletzlich.
+     In Konzeptalben wie „Chaotisch Psychotisch“, „Politikverdrossen“ oder „Narrengold“ entstehen dichte Klangwelten, in denen Drogenpsychosen, Machtkritik und gesellschaftliche Maskeraden aufeinandertreffen. Jedes Album ist ein thematischer Kosmos, jeder Track ein Miniatur-Manifest – mal roh und wütend, mal sarkastisch und verletzlich.
     </p>
     <p class="content-block">
-     Stilistisch bewegt sich Psych3d3licX zwischen Sprechgesang, industriallastigen Beats, glitch-infizierten Sounds und experimenteller Lyrik &ndash; unberechenbar, unbequem, unvergesslich. Wer hier zuh&ouml;rt, bekommt keine Antworten, sondern Fragen, die brennen. Keine L&ouml;sungen, sondern Realit&auml;ten, die weh tun. Keine Floskeln, sondern Kunst, die Haltung zeigt.
+     Stilistisch bewegt sich Psych3d3licX zwischen Sprechgesang, industriallastigen Beats, glitch-infizierten Sounds und experimenteller Lyrik – unberechenbar, unbequem, unvergesslich. Wer hier zuhört, bekommt keine Antworten, sondern Fragen, die brennen. Keine Lösungen, sondern Realitäten, die weh tun. Keine Floskeln, sondern Kunst, die Haltung zeigt.
     </p>
     <p class="content-block">
      <strong>
-      Psych3d3licX steht f&uuml;r Musik mit Substanz &ndash; im besten und im schlimmsten Sinne.
+      Psych3d3licX steht für Musik mit Substanz – im besten und im schlimmsten Sinne.
      </strong>
     </p>
     <p class="content-block">
      <br/>
-     Psych3d3licX macht Musik f&uuml;r die, die nicht wegsehen wollen.
+     Psych3d3licX macht Musik für die, die nicht wegsehen wollen.
      <br/>
-     Zwischen Drogenwahnsinn, politischer Kritik und gesellschaftlichem Absturz erz&auml;hlt er in kompromisslosen Konzeptalben von einer Welt am Limit &ndash; roh, poetisch, sarkastisch und radikal ehrlich. Jeder Track ist ein Schlag ins System.
+     Zwischen Drogenwahnsinn, politischer Kritik und gesellschaftlichem Absturz erzählt er in kompromisslosen Konzeptalben von einer Welt am Limit – roh, poetisch, sarkastisch und radikal ehrlich. Jeder Track ist ein Schlag ins System.
     </p>
     <p class="content-block">
-     Musik zwischen Wahnsinn, Systemkritik &amp; Selbstzerst&ouml;rung.
+     Musik zwischen Wahnsinn, Systemkritik &amp; Selbstzerstörung.
      <br/>
      Konzeptalben mit Haltung.
      <br/>
@@ -455,24 +150,24 @@
         Narrengold
        </h3>
        <p>
-        Willkommen in einer Welt, in der die Pest tanzt, der K&ouml;nig pl&uuml;ndert und der Priester l&uuml;gt &ndash;
+        Willkommen in einer Welt, in der die Pest tanzt, der König plündert und der Priester lügt –
         <strong>
          Narrengold
         </strong>
-        ist ein scharfz&uuml;ngiges Konzeptalbum voller Sarkasmus, Spott und bitterer Wahrheiten. Zwischen Gossenhymne und Revoltenreim erz&auml;hlen die Songs Geschichten aus einem finsteren Mittelalter, das weniger historisch als zutiefst gegenw&auml;rtig wirkt.
+        ist ein scharfzüngiges Konzeptalbum voller Sarkasmus, Spott und bitterer Wahrheiten. Zwischen Gossenhymne und Revoltenreim erzählen die Songs Geschichten aus einem finsteren Mittelalter, das weniger historisch als zutiefst gegenwärtig wirkt.
        </p>
        <p>
-        Mit messerscharfen Texten und galligem Humor rechnet das Album mit Macht, Kirche, Gier und der Selbstverblendung des &bdquo;niederen Volkes&ldquo; ab. Ob in der bitteren Anklage von &bdquo;Sterbet ihr Maden&ldquo;, der bei&szlig;enden Parodie &bdquo;Lasst uns tanzen&ldquo;, dem h&ouml;hnischen Prunk von &bdquo;Der K&ouml;nig sprach&ldquo; oder dem klirrend ehrlichen Trinklied &bdquo;Wir trinken auf euch&ldquo; &ndash;
+        Mit messerscharfen Texten und galligem Humor rechnet das Album mit Macht, Kirche, Gier und der Selbstverblendung des „niederen Volkes“ ab. Ob in der bitteren Anklage von „Sterbet ihr Maden“, der beißenden Parodie „Lasst uns tanzen“, dem höhnischen Prunk von „Der König sprach“ oder dem klirrend ehrlichen Trinklied „Wir trinken auf euch“ –
         <strong>
          Narrengold
         </strong>
-        bedient sich der Sprache vergangener Jahrhunderte, um heutige Abgr&uuml;nde zu beleuchten.
+        bedient sich der Sprache vergangener Jahrhunderte, um heutige Abgründe zu beleuchten.
        </p>
        <p>
         <em>
          Narrengold
         </em>
-        ist kein romantisierender Mittelalter-Markt-Soundtrack, sondern ein sarkastisches Narrenspiegel-Panorama f&uuml;r die Gegenwart &ndash; roh, poetisch, unbequem.
+        ist kein romantisierender Mittelalter-Markt-Soundtrack, sondern ein sarkastisches Narrenspiegel-Panorama für die Gegenwart – roh, poetisch, unbequem.
        </p>
       </div>
      </div>
@@ -488,14 +183,14 @@
         <strong>
          Total breit
         </strong>
-        ist kein gew&ouml;hnliches Album &ndash; es ist ein wilder Trip durch die br&uuml;chige Psyche einer Generation im Nebel. Zwischen ironischem Eskapismus, poetischem Selbstverlust und bitters&uuml;&szlig;em Hedonismus entfaltet sich ein musikalisches Mosaik aus Rausch, Rebellion und Resignation.
+        ist kein gewöhnliches Album – es ist ein wilder Trip durch die brüchige Psyche einer Generation im Nebel. Zwischen ironischem Eskapismus, poetischem Selbstverlust und bittersüßem Hedonismus entfaltet sich ein musikalisches Mosaik aus Rausch, Rebellion und Resignation.
        </p>
        <p>
-        Das Album ist ein Spiegelkabinett des modernen &Uuml;berdrusses &ndash; mal tanzbar, mal tragikomisch, immer ehrlich.
+        Das Album ist ein Spiegelkabinett des modernen Überdrusses – mal tanzbar, mal tragikomisch, immer ehrlich.
         <strong>
          Total breit
         </strong>
-        ist Soundtrack und Zustandsbeschreibung zugleich: ein melancholisches Manifest der Verlorenheit mit einem Augenzwinkern &ndash; irgendwo zwischen Absturz und Erleuchtung.
+        ist Soundtrack und Zustandsbeschreibung zugleich: ein melancholisches Manifest der Verlorenheit mit einem Augenzwinkern – irgendwo zwischen Absturz und Erleuchtung.
        </p>
       </div>
      </div>
@@ -511,16 +206,16 @@
         <strong>
          Erfolg durch Substanz
         </strong>
-        ist ein musikalischer Ritt durch die glitzernde Fassade der Leistungsgesellschaft &ndash; und ihren bitteren Preis. Zwischen Adrenalin und Ersch&ouml;pfung erz&auml;hlt das Album in kraftvollen Versen vom t&auml;glichen Kampf um Effizienz, Anerkennung und Selbstoptimierung. Der Soundtrack zu einem Leben auf Hochtouren, das sich zwischen Meeting-Marathons und Pillencocktails verliert.
+        ist ein musikalischer Ritt durch die glitzernde Fassade der Leistungsgesellschaft – und ihren bitteren Preis. Zwischen Adrenalin und Erschöpfung erzählt das Album in kraftvollen Versen vom täglichen Kampf um Effizienz, Anerkennung und Selbstoptimierung. Der Soundtrack zu einem Leben auf Hochtouren, das sich zwischen Meeting-Marathons und Pillencocktails verliert.
        </p>
        <p>
-        Mit scharfem Sarkasmus und d&uuml;sterer Ehrlichkeit liefert das Album ein Portrait unserer Zeit: der Mensch als Maschine, getunt mit Pharma und getrieben von einem nie endenden Leistungsdruck. Die Beats pulsieren wie ein Herz unter Dauerstress, die Texte bohren sich direkt ins Nervensystem.
+        Mit scharfem Sarkasmus und düsterer Ehrlichkeit liefert das Album ein Portrait unserer Zeit: der Mensch als Maschine, getunt mit Pharma und getrieben von einem nie endenden Leistungsdruck. Die Beats pulsieren wie ein Herz unter Dauerstress, die Texte bohren sich direkt ins Nervensystem.
        </p>
        <p>
         <em>
          Erfolg durch Substanz
         </em>
-        ist nicht nur Musik &ndash; es ist eine Diagnose. Und ein Weckruf.
+        ist nicht nur Musik – es ist eine Diagnose. Und ein Weckruf.
        </p>
       </div>
      </div>
@@ -536,42 +231,42 @@
         <strong>
          Chaotisch Psychotisch
         </strong>
-        ist ein wilder, schonungsloser Abstieg in die zersplitterte Psyche einer zerrissenen Welt. Zwischen Wahnsinn, Drogenrausch und Gesellschaftskritik tanzt dieses Werk auf einem brennenden Drahtseil zwischen Realit&auml;t und Illusion.
+        ist ein wilder, schonungsloser Abstieg in die zersplitterte Psyche einer zerrissenen Welt. Zwischen Wahnsinn, Drogenrausch und Gesellschaftskritik tanzt dieses Werk auf einem brennenden Drahtseil zwischen Realität und Illusion.
        </p>
        <p>
-        Jeder Track ist ein Kapitel einer d&uuml;steren Reise: Vom titelgebenden Opener &uuml;ber das bedr&uuml;ckend ehrliche &bdquo;Schei&szlig; Junkie&ldquo; bis hin zur gesellschaftskritischen Abrechnung &bdquo;Verdrehte Welt&ldquo;, die das Spiel mit Macht, Medien und Manipulation entlarvt.
+        Jeder Track ist ein Kapitel einer düsteren Reise: Vom titelgebenden Opener über das bedrückend ehrliche „Scheiß Junkie“ bis hin zur gesellschaftskritischen Abrechnung „Verdrehte Welt“, die das Spiel mit Macht, Medien und Manipulation entlarvt.
        </p>
        <p>
-        Lieder wie &bdquo;Diagnose Psychose&ldquo; oder &bdquo;Drogensoziopathie&ldquo; werfen einen intensiven Blick in den mentalen Abgrund &ndash; beklemmend, poetisch, brutal real.
+        Lieder wie „Diagnose Psychose“ oder „Drogensoziopathie“ werfen einen intensiven Blick in den mentalen Abgrund – beklemmend, poetisch, brutal real.
         <em>
          Chaotisch Psychotisch
         </em>
-        ist ein Manifest des Kontrollverlusts &ndash; vertont in acht Klanggewitter.
+        ist ein Manifest des Kontrollverlusts – vertont in acht Klanggewitter.
        </p>
       </div>
      </div>
     </div>
     <div class="content-block">
      <div class="album">
-      <img alt="Intoxikation f&uuml;r Mindestlohn" src="covers/intoxikation_f&uuml;r_mindestlohn_cover.jpg"/>
+      <img alt="Intoxikation für Mindestlohn" src="covers/intoxikation_für_mindestlohn_cover.jpg"/>
       <div class="album-description">
        <h3>
-        Intoxikation f&uuml;r Mindestlohn
+        Intoxikation für Mindestlohn
        </h3>
        <p>
         <strong>
-         Intoxikation f&uuml;r Mindestlohn
+         Intoxikation für Mindestlohn
         </strong>
-        ist ein Soundtrack f&uuml;r eine Generation, die zwischen Fortschritt und Verwertung zerrieben wird. Dieses Album taucht ein in die d&uuml;stere Realit&auml;t klinischer Medikamentenstudien &ndash; gesehen durch die Augen eines Probanden, dessen K&ouml;rper als Schlachtfeld f&uuml;r pharmazeutischen Fortschritt dient.
+        ist ein Soundtrack für eine Generation, die zwischen Fortschritt und Verwertung zerrieben wird. Dieses Album taucht ein in die düstere Realität klinischer Medikamentenstudien – gesehen durch die Augen eines Probanden, dessen Körper als Schlachtfeld für pharmazeutischen Fortschritt dient.
        </p>
        <p>
-        Die Texte sind schonungslos, ironisch und von bitterer Poesie durchdrungen. Zwischen Infusionen, Bluttests und brennenden Organen entfaltet sich ein Portr&auml;t moderner Ausbeutung: eine Intoxikation, bezahlt mit Mindestlohn.
+        Die Texte sind schonungslos, ironisch und von bitterer Poesie durchdrungen. Zwischen Infusionen, Bluttests und brennenden Organen entfaltet sich ein Porträt moderner Ausbeutung: eine Intoxikation, bezahlt mit Mindestlohn.
        </p>
        <p>
         <em>
-         Intoxikation f&uuml;r Mindestlohn
+         Intoxikation für Mindestlohn
         </em>
-        ist kein Trostpflaster. Es ist ein Laborbericht aus der Unterseite des Fortschritts &ndash; eine k&uuml;nstlerische Vergiftung mit Langzeitwirkung.
+        ist kein Trostpflaster. Es ist ein Laborbericht aus der Unterseite des Fortschritts – eine künstlerische Vergiftung mit Langzeitwirkung.
        </p>
       </div>
      </div>
@@ -587,16 +282,16 @@
         <strong>
          Politikverdrossen
         </strong>
-        ist ein musikalischer Aufschrei gegen eine kranke Ordnung. In 14 kraftvollen Tracks prallen politische Analyse, soziale Anklage und emotionale Ehrlichkeit aufeinander. Das Album ist eine Mischung aus lyrischer Radikalit&auml;t und musikalischer Unnachgiebigkeit &ndash; irgendwo zwischen Wut und Hoffnung, Realit&auml;t und Rebellion.
+        ist ein musikalischer Aufschrei gegen eine kranke Ordnung. In 14 kraftvollen Tracks prallen politische Analyse, soziale Anklage und emotionale Ehrlichkeit aufeinander. Das Album ist eine Mischung aus lyrischer Radikalität und musikalischer Unnachgiebigkeit – irgendwo zwischen Wut und Hoffnung, Realität und Rebellion.
        </p>
        <p>
-        Ob es um religi&ouml;sen Fanatismus, den Zusammenbruch &ouml;ffentlicher Ordnung oder das schleichende Gift der Korruption geht &ndash; jedes St&uuml;ck rei&szlig;t eine neue Wunde auf. Mit Songs wie &bdquo;Konservativ&ldquo;, &bdquo;Kirche ist schei&szlig;e&ldquo; oder &bdquo;Friedrich Merz &ndash; ein schlechter Scherz&ldquo; wird die politische Elite gnadenlos zerlegt.
+        Ob es um religiösen Fanatismus, den Zusammenbruch öffentlicher Ordnung oder das schleichende Gift der Korruption geht – jedes Stück reißt eine neue Wunde auf. Mit Songs wie „Konservativ“, „Kirche ist scheiße“ oder „Friedrich Merz – ein schlechter Scherz“ wird die politische Elite gnadenlos zerlegt.
        </p>
        <p>
         <em>
          Politikverdrossen
         </em>
-        ist ein Album f&uuml;r alle, die sich nicht l&auml;nger mit hohlen Phrasen, gebrochenen Versprechen und systematischer Ungerechtigkeit abfinden wollen &ndash; ein akustischer Protest, der nachhallt.
+        ist ein Album für alle, die sich nicht länger mit hohlen Phrasen, gebrochenen Versprechen und systematischer Ungerechtigkeit abfinden wollen – ein akustischer Protest, der nachhallt.
        </p>
       </div>
      </div>
@@ -611,7 +306,7 @@
       <div class="countdown" id="countdown">
       </div>
       <p id="countdown-message">
-       Speichere jetzt vor &ndash; damit du's nicht verpasst!
+       Speichere jetzt vor – damit du's nicht verpasst!
       </p>
      </div>
      <div id="presave-content">
@@ -640,9 +335,9 @@
        </a>
       </div>
       <div class="presave-entry">
-       <img alt="Intoxikation f&uuml;r Mindestlohn" src="covers/intoxikation_f&uuml;r_mindestlohn_cover.jpg"/>
+       <img alt="Intoxikation für Mindestlohn" src="covers/intoxikation_für_mindestlohn_cover.jpg"/>
        <a class="music-link" href="https://distrokid.com/hyperfollow/psych3d3licx/intoxikation-fr-mindestlohn-remastered" target="_blank">
-        Pre-Save: Intoxikation f&uuml;r Mindestlohn
+        Pre-Save: Intoxikation für Mindestlohn
        </a>
       </div>
       <div class="presave-entry">
@@ -704,76 +399,17 @@
      KONTAKT
     </h2>
     <p class="content-block">
-     F&uuml;r Anfragen, Kooperationen oder Feedback erreichst du Psych3d3licX per Mail an:
+     Für Anfragen, Kooperationen oder Feedback erreichst du Psych3d3licX per Mail an:
     </p>
     <div class="content-block" id="mail-container">
      <span id="mail-link">
      </span>
     </div>
    </div>
-   <script>
-    function showTab(id, el) {
-    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-    el.classList.add('active');
-
-    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const defaultTab = document.querySelector('.tab-button.active');
-    const defaultId = defaultTab && defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1];
-    if (defaultId) showTab(defaultId, defaultTab);
-
-    const releaseDate = new Date("2025-04-21T01:00:00").getTime();
-    const redirectURL = "https://open.spotify.com/intl-de/artist/3F4vfyQQDgEg3jF3qPdeDK";
-    const wrapper = document.getElementById("countdown-wrapper");
-    const presaveContent = document.getElementById("presave-content");
-    const countdownElement = document.getElementById("countdown");
-    const message = document.getElementById("countdown-message");
-
-    const timer = setInterval(function() {
-      if (!document.getElementById("presave").classList.contains("active")) return;
-      const now = new Date().getTime();
-      const distance = releaseDate - now;
-
-      if (distance < 0) {
-        message.textContent = "Jetzt auf Spotify streamen.";
-      presaveContent.style.display = "none";
-        countdownElement.innerHTML = "";
-        wrapper.onclick = () => window.open(redirectURL, '_blank');
-        wrapper.style.cursor = "pointer";
-        clearInterval(timer);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      message.textContent = "Speichere jetzt vor – damit du's nicht verpasst!";
-      presaveContent.style.display = "block";
-      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-      wrapper.onclick = null;
-      wrapper.style.cursor = "default";
-    }, 1000);
-  });
-
-
-
-
-document.querySelectorAll('.legal-link').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    openModal(this.dataset.type);
-  });
-});
-   </script>
   </div>
   <footer>
    <p>
-    &copy; 2025 Psych3d3licX. Alle Rechte vorbehalten.
+    © 2025 Psych3d3licX. Alle Rechte vorbehalten.
    </p>
    <p>
     <a onclick="openPopup('impressum')">
@@ -788,15 +424,15 @@ document.querySelectorAll('.legal-link').forEach(link => {
   <!-- Impressum-Popup -->
   <div aria-labelledby="impressum-title" aria-modal="true" class="popup-modal" id="popup-impressum" role="dialog">
    <div class="popup-content">
-    <button aria-label="Schlie&szlig;en" class="close-btn" onclick="closePopup()">
-     &times;
+    <button aria-label="Schließen" class="close-btn" onclick="closePopup()">
+     ×
     </button>
     <h2 class="content-block" id="impressum-title">
      Impressum
     </h2>
     <div class="content-block">
      <h3>
-      Verantwortlich f&uuml;r den Inhalt nach &sect;55 Abs. 2 RStV:
+      Verantwortlich für den Inhalt nach §55 Abs. 2 RStV:
      </h3>
      <p>
       Psych3d3licX
@@ -804,18 +440,18 @@ document.querySelectorAll('.legal-link').forEach(link => {
     </div>
     <div class="content-block">
      <h3>
-      Haftung f&uuml;r Inhalte
+      Haftung für Inhalte
      </h3>
      <p>
-      Die Inhalte unserer Seiten wurden mit gr&ouml;&szlig;ter Sorgfalt erstellt. F&uuml;r die Richtigkeit, Vollst&auml;ndigkeit und Aktualit&auml;t der Inhalte k&ouml;nnen wir jedoch keine Gew&auml;hr &uuml;bernehmen.
+      Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
      </p>
     </div>
     <div class="content-block">
      <h3>
-      Haftung f&uuml;r Links
+      Haftung für Links
      </h3>
      <p>
-      Unser Angebot enth&auml;lt Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen.
+      Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
      </p>
     </div>
     <div class="content-block">
@@ -831,18 +467,18 @@ document.querySelectorAll('.legal-link').forEach(link => {
   <!-- Datenschutz-Popup -->
   <div aria-labelledby="datenschutz-title" aria-modal="true" class="popup-modal" id="popup-datenschutz" role="dialog">
    <div class="popup-content">
-    <button aria-label="Schlie&szlig;en" class="close-btn" onclick="closePopup()">
-     &times;
+    <button aria-label="Schließen" class="close-btn" onclick="closePopup()">
+     ×
     </button>
     <h2 class="content-block" id="datenschutz-title">
-     Datenschutzerkl&auml;rung
+     Datenschutzerklärung
     </h2>
     <div class="content-block">
      <h3>
       Information
      </h3>
      <p>
-      Diese Website erhebt und verarbeitet keine personenbezogenen Daten, au&szlig;er durch Drittanbieter-Links (z. B. Spotify, YouTube).
+      Diese Website erhebt und verarbeitet keine personenbezogenen Daten, außer durch Drittanbieter-Links (z. B. Spotify, YouTube).
      </p>
     </div>
     <div class="content-block">
@@ -874,48 +510,12 @@ document.querySelectorAll('.legal-link').forEach(link => {
       Ihre Rechte
      </h3>
      <p>
-      Auskunft, L&ouml;schung, Berichtigung &ndash; per Mail m&ouml;glich.
+      Auskunft, Löschung, Berichtigung – per Mail möglich.
      </p>
     </div>
    </div>
   </div>
-  <script>
-   function openPopup(type) {
-      const popup = document.getElementById('popup-' + type);
-      popup.style.display = 'flex';
-      requestAnimationFrame(() => popup.classList.add('visible'));
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closePopup() {
-      document.querySelectorAll('.popup-modal').forEach(p => {
-        p.classList.remove('visible');
-        setTimeout(() => p.style.display = 'none', 300);
-      });
-      document.body.style.overflow = 'auto';
-    }
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') {
-        closePopup();
-      }
-    });
-  </script>
-  <script>
-   (function() {
-    const coded = [112,115,121,99,104,51,100,51,108,105,99,120,64,103,109,97,105,108,46,99,111,109];
-    const decoded = coded.map(c => String.fromCharCode(c)).join("");
-    const ids = ["mail-link"];
-    const isHuman = !/bot|crawl|spider|curl|wget|python|headless/i.test(navigator.userAgent);
-    if (isHuman) {
-      ids.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) {
-          el.innerHTML = `<a class="music-link" href="mailto:${decoded}">${decoded}</a>`;
-        }
-      });
-    }
-  })();
+  <script src="scripts.js">
   </script>
  </body>
 </html>
