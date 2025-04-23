@@ -333,10 +333,14 @@ footer a:hover {
 
 @media (max-width: 600px) {
   .tab-button {
-    flex: 0 0 auto; /* verhindert Quetschen */
-    font-size: 0.85em;
+    flex-direction: column; /* Icon oben, Text darunter */
+    font-size: 0.9em;
+    line-height: 1.2em;
     padding: 10px 14px;
-    white-space: nowrap;
+    text-align: center;
+  }
+  .tab-button > *:first-child {
+    margin-bottom: 4px;
   }
 }
 
