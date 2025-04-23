@@ -253,12 +253,12 @@ footer a:hover {
   z-index: 1000;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh; /* statt height: 100vh */
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(6px);
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* statt center */
   padding: 20px;
   overflow-y: auto;
   box-sizing: border-box;
@@ -281,6 +281,7 @@ footer a:hover {
   max-height: 90vh;
   overflow-y: auto;
   box-sizing: border-box;
+  margin-top: 40px;
 }
 
 .popup-content h2 {
