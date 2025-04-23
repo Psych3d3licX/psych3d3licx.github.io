@@ -40,7 +40,10 @@ h1 {
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* statt center, für mobiles Scrollverhalten */
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
   background-color: #111;
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
@@ -325,4 +328,17 @@ footer a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@media (max-width: 600px) {
+  .tab-button {
+    flex: 0 0 auto; /* verhindert Quetschen */
+    font-size: 0.85em;
+    padding: 10px 14px;
+    white-space: nowrap;
+  }
+}
+
+nav::-webkit-scrollbar {
+  display: none;
 }
