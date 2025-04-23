@@ -6,312 +6,7 @@
   <title>
    TEST &ndash; Psych3d3licX &ndash; #KunstMitSubstanz
   </title>
-  <style>
-   html, body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #0e0e0e;
-        color: #f0f0f0;
-        text-align: center;
-        overflow-x: hidden;
-      }
-      img, iframe, video {
-        max-width: 100%;
-        height: auto;
-      }
-      header {
-        background: url('images/header.jpg') center/cover no-repeat;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .profile {
-        text-align: center;
-        margin-top: -80px;
-      }
-      .profile img {
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        border: 4px solid #fff;
-      }
-      h1 {
-        margin: 10px 0 0 0;
-        font-size: 2em;
-      }
-      nav {
-        display: flex;
-        justify-content: center;
-        background-color: #111;
-        border-top: 2px solid #333;
-        border-bottom: 2px solid #333;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
-      section {
-        max-width: 1000px;
-        margin: 40px auto;
-        padding: 0 20px;
-      }
-      .content-block {
-        margin-bottom: 50px;
-        padding-bottom: 30px;
-        border-bottom: 1px dashed #444;
-        border-left: 2px solid #71427f;
-        padding-left: 20px;
-      }
-      .tab-content {
-        max-width: 1000px;
-        margin: 0 auto;
-        display: none;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-        pointer-events: none;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        animation: fadeSlideIn 0.4s ease forwards;
-      }
-      .tab-content.active {
-        display: block;
-        opacity: 1;
-        pointer-events: initial;
-        position: relative;
-      }
-      .presave-entry {
-        border: 1px solid #333;
-        border-radius: 0;
-        background-color: #111;
-        padding: 20px;
-        max-width: 1000px;
-        margin: 40px auto;
-        text-align: center;
-      }
-      .presave-entry img,
-      .album img {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-        object-fit: cover;
-        border: 2px solid #333;
-        margin-bottom: 15px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 0 !important;
-        box-shadow: none;
-      }
-      .presave-entry a,
-      .music-link {
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #111;
-        border: 1px solid #444;
-        border-radius: 8px;
-        color: #71427f;
-        text-decoration: none;
-        font-size: 1em;
-        transition: background 0.3s;
-      }
-      .presave-entry a:hover,
-      .music-link:hover {
-        background-color: #222;
-      }
-      .album {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 40px 0;
-      }
-      .album-description {
-        max-width: 600px;
-        text-align: center;
-      }
-      .album-description h3 {
-        margin-bottom: 10px;
-        font-size: 1.4em;
-        color: #f0f0f0;
-      }
-      .album-description p {
-        font-size: 1em;
-        line-height: 1.5em;
-        color: #ccc;
-      }
-      h2 {
-        margin-bottom: 30px;
-      }
-      .tab-button {
-        background-color: #111;
-        color: #71427f;
-        border: 1px solid #71427f;
-        border-radius: 12px;
-        padding: 12px 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        font-weight: 600;
-        font-size: 1em;
-        position: relative;
-        z-index: 1;
-        text-align: center;
-        transition: all 0.3s ease;
-        box-shadow: 0 0 8px #71427f55;
-      }
-      .tab-button:hover {
-        background-color: #1a1a1a;
-        box-shadow: 0 0 12px #a679b2aa;
-        transform: scale(1.03);
-        z-index: 10;
-      }
-      .tab-button.active {
-        background-color: #222;
-        font-weight: bold;
-        border-bottom: 2px solid #71427f;
-      }
-      .tab-content > *:not(:last-child) {
-        margin-bottom: 50px;
-        padding-bottom: 30px;
-        border-bottom: 1px dashed #444;
-        border-left: 2px solid #71427f;
-        padding-left: 20px;
-      }
-      .presave-entry:hover,
-      .album:hover {
-        box-shadow: 0 0 10px #71427f99;
-        transition: box-shadow 0.3s ease;
-      }
-      .countdown-box {
-        max-width: 320px;
-        margin: 0 auto;
-        padding: 20px;
-        border: 2px solid #71427f;
-        border-radius: 12px;
-        background-color: rgba(17, 17, 17, 0.9);
-        box-shadow: 0 0 15px #71427f33;
-        backdrop-filter: blur(6px);
-      }
-      .countdown {
-        font-size: 2em;
-        font-family: 'Courier New', monospace;
-        font-weight: bold;
-        color: #fff;
-        margin-bottom: 10px;
-      }
-      .countdown-box p {
-        font-size: 0.95em;
-        color: #bbb;
-        margin: 0;
-      }
-      @keyframes fadeSlideIn {
-        0% {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      footer {
-        background-color: #111;
-        color: #888;
-        text-align: center;
-        padding: 30px 10px;
-        font-size: 0.9em;
-        border-top: 1px solid #333;
-      }
-      footer a {
-        color: #71427f;
-        text-decoration: none;
-        margin: 0 8px;
-        transition: color 0.3s;
-        cursor: pointer;
-      }
-      footer a:hover {
-        color: #a679b2;
-      }
-      .popup-modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(6px);
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        overflow-y: auto;
-        box-sizing: border-box;
-        transition: opacity 0.3s ease;
-        opacity: 0;
-      }
-      .popup-content {
-        position: relative;
-        background: #111;
-        border: 1px solid #71427f;
-        border-radius: 12px;
-        padding: 30px;
-        max-width: 600px;
-        width: 100%;
-        margin: 0 auto;
-        color: #fff;
-        text-align: center;
-        box-shadow: 0 0 20px #71427f99;
-        max-height: 90vh;
-        overflow-y: auto;
-        box-sizing: border-box;
-      }
-      .popup-content h2 {
-        margin-top: 0;
-      }
-        .popup-content h3 {
-        margin-bottom: 8px;
-        margin-top: 20px;
-      }
-      .popup-content p {
-        margin: 10px 0;
-      }
-      .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 24px;
-      cursor: pointer;
-      }
-      .close-btn:hover {
-        color: #ccc;
-      }
-      @media (max-width: 600px) {
-        nav {
-          flex-direction: column;
-          align-items: stretch;
-        }
-      .tab-button {
-        width: 100%;
-        justify-content: flex-start;
-        padding: 12px 20px;
-        font-size: 1em;
-        border-top: 1px solid #222;
-      }
-      .tab-button.active {
-        border-bottom: none;
-        border-left: 6px solid #71427f;
-      }
-    }
-    .popup-modal.visible {
-      opacity: 1;
-    }
-  </style>
+  <link href="style.css" rel="stylesheet"/>
  </head>
  <body>
   <header>
@@ -329,22 +24,52 @@
    <br/>
    <nav>
     <button class="tab-button active" onclick="showTab('artist', this)">
-     👤 Artist
+     <span class="tab-icon">
+      👤
+     </span>
+     <span class="tab-label">
+      Artist
+     </span>
     </button>
     <button class="tab-button" onclick="showTab('diskografie', this)">
-     💿 Diskografie
+     <span class="tab-icon">
+      💿
+     </span>
+     <span class="tab-label">
+      Diskografie
+     </span>
     </button>
     <button class="tab-button" onclick="showTab('dienste', this)">
-     🎶 Musikdienste
+     <span class="tab-icon">
+      🎶
+     </span>
+     <span class="tab-label">
+      Musikdienste
+     </span>
     </button>
     <button class="tab-button" onclick="showTab('social', this)">
-     🌐 Social Media
+     <span class="tab-icon">
+      🌐
+     </span>
+     <span class="tab-label">
+      Social Media
+     </span>
     </button>
     <button class="tab-button" onclick="showTab('presave', this)">
-     ⏳ Pre-Save
+     <span class="tab-icon">
+      ⏳
+     </span>
+     <span class="tab-label">
+      Pre-Save
+     </span>
     </button>
     <button class="tab-button" onclick="showTab('kontakt', this)">
-     ✉️ Kontakt
+     <span class="tab-icon">
+      ✉️
+     </span>
+     <span class="tab-label">
+      Kontakt
+     </span>
     </button>
    </nav>
    <div class="tab-content active" id="artist">
@@ -363,7 +88,7 @@
      In Konzeptalben wie &bdquo;Chaotisch Psychotisch&ldquo;, &bdquo;Politikverdrossen&ldquo; oder &bdquo;Narrengold&ldquo; entstehen dichte Klangwelten, in denen Drogenpsychosen, Machtkritik und gesellschaftliche Maskeraden aufeinandertreffen. Jedes Album ist ein thematischer Kosmos, jeder Track ein Miniatur-Manifest &ndash; mal roh und w&uuml;tend, mal sarkastisch und verletzlich.
     </p>
     <p class="content-block">
-     Stilistisch bewegt sich Psych3d3licX zwischen Sprechgesang, industriallastigen Beats, glitch-infizierten Sounds und experimenteller Lyrik &ndash; unberechenbar, unbequem, unvergesslich. Wer hier zuh&ouml;rt, bekommt keine Antworten, sondern Fragen, die brennen. Keine L&ouml;sungen, sondern Realit&auml;ten, die weh tun. Keine Floskeln, sondern Kunst, die Haltung zeigt.
+     Stilistisch bewegt sich Psych3d3licX zwischen Punk-Rock, Sprechgesang, industriallastigen Beats, glitch-infizierten Sounds und experimenteller Lyrik &ndash; unberechenbar, unbequem, unvergesslich. Wer hier zuh&ouml;rt, bekommt keine Antworten, sondern Fragen, die brennen. Keine L&ouml;sungen, sondern Realit&auml;ten, die weh tun. Keine Floskeln, sondern Kunst, die Haltung zeigt.
     </p>
     <p class="content-block">
      <strong>
@@ -711,65 +436,6 @@
      </span>
     </div>
    </div>
-   <script>
-    function showTab(id, el) {
-    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-    el.classList.add('active');
-
-    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const defaultTab = document.querySelector('.tab-button.active');
-    const defaultId = defaultTab && defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1];
-    if (defaultId) showTab(defaultId, defaultTab);
-
-    const releaseDate = new Date("2025-04-21T01:00:00").getTime();
-    const redirectURL = "https://open.spotify.com/intl-de/artist/3F4vfyQQDgEg3jF3qPdeDK";
-    const wrapper = document.getElementById("countdown-wrapper");
-    const presaveContent = document.getElementById("presave-content");
-    const countdownElement = document.getElementById("countdown");
-    const message = document.getElementById("countdown-message");
-
-    const timer = setInterval(function() {
-      if (!document.getElementById("presave").classList.contains("active")) return;
-      const now = new Date().getTime();
-      const distance = releaseDate - now;
-
-      if (distance < 0) {
-        message.textContent = "Jetzt auf Spotify streamen.";
-      presaveContent.style.display = "none";
-        countdownElement.innerHTML = "";
-        wrapper.onclick = () => window.open(redirectURL, '_blank');
-        wrapper.style.cursor = "pointer";
-        clearInterval(timer);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      message.textContent = "Speichere jetzt vor – damit du's nicht verpasst!";
-      presaveContent.style.display = "block";
-      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-      wrapper.onclick = null;
-      wrapper.style.cursor = "default";
-    }, 1000);
-  });
-
-
-
-
-document.querySelectorAll('.legal-link').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    openModal(this.dataset.type);
-  });
-});
-   </script>
   </div>
   <footer>
    <p>
@@ -879,43 +545,7 @@ document.querySelectorAll('.legal-link').forEach(link => {
     </div>
    </div>
   </div>
-  <script>
-   function openPopup(type) {
-      const popup = document.getElementById('popup-' + type);
-      popup.style.display = 'flex';
-      requestAnimationFrame(() => popup.classList.add('visible'));
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closePopup() {
-      document.querySelectorAll('.popup-modal').forEach(p => {
-        p.classList.remove('visible');
-        setTimeout(() => p.style.display = 'none', 300);
-      });
-      document.body.style.overflow = 'auto';
-    }
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') {
-        closePopup();
-      }
-    });
-  </script>
-  <script>
-   (function() {
-    const coded = [112,115,121,99,104,51,100,51,108,105,99,120,64,103,109,97,105,108,46,99,111,109];
-    const decoded = coded.map(c => String.fromCharCode(c)).join("");
-    const ids = ["mail-link"];
-    const isHuman = !/bot|crawl|spider|curl|wget|python|headless/i.test(navigator.userAgent);
-    if (isHuman) {
-      ids.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) {
-          el.innerHTML = `<a class="music-link" href="mailto:${decoded}">${decoded}</a>`;
-        }
-      });
-    }
-  })();
+  <script src="scripts.js">
   </script>
  </body>
 </html>
