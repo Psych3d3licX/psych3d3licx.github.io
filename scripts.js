@@ -9,7 +9,7 @@ window.openPopup = function(type) {
   const popup = document.getElementById('popup-' + type);
   popup.style.display = 'flex';
   requestAnimationFrame(() => popup.classList.add('visible'));
-  document.body.style.overflow = 'hidden';
+  document.documentElement.style.overflow = 'hidden'; // statt body
 };
 
 window.closePopup = function() {
@@ -17,7 +17,7 @@ window.closePopup = function() {
     p.classList.remove('visible');
     setTimeout(() => p.style.display = 'none', 300);
   });
-  document.body.style.overflow = 'auto';
+  document.documentElement.style.overflow = 'auto'; // statt body
 };
 
 document.addEventListener('keydown', function (event) {
