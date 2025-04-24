@@ -37,10 +37,6 @@ nav {
   justify-content: flex-start;
   /* statt center, für mobiles Scrollverhalten */
   overflow-x: auto;
-  overflow-y: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   background-color: #111;
@@ -317,3 +313,14 @@ nav::-webkit-scrollbar {
   display: none;
 }
 
+
+
+/* hinzugefügt: ersetzt Inline-Styles bei <ul> Musik- und Social-Links */
+.music-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
