@@ -57,3 +57,4 @@ Der Code bildet ein solides, eigenständiges Webprojekt mit klaren Strukturen un
 
 ---
 **Stand der Analyse: April 2025**
+
