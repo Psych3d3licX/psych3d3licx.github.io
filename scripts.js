@@ -13,7 +13,11 @@ window.showTab = function(id, el) {
 window.openPopup = function(type) {
   const popup = document.getElementById('popup-' + type);
   popup.style.display = 'flex';
-  requestAnimationFrame(() => popup.classList.add('visible'));
+  requestAnimationFrame(() => {
+    popup.classList.add('visible');
+    popup.setAttribute('tabindex', '-1');
+    popup.focus();
+  });
 
   scrollY = window.scrollY;
   document.body.style.position = 'fixed';

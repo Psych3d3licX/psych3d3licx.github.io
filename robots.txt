@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://psych3d3licx.com/sitemap.xml
+Sitemap: https://deine-domain.de/sitemap.xml
