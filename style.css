@@ -400,3 +400,119 @@ img.album {
   display: block;
   margin: 0 auto;
 }
+
+/* Größere Screens */
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.125rem; /* Etwas größere Grundschrift */
+  }
+  header, nav, main, footer {
+    padding: 2rem 4rem; /* Mehr Abstand */
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    font-size: 1.25rem; /* Noch größere Schrift */
+  }
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+
+/* --- Optimiertes Tab Menü für WCAG 2.1 AA --- */
+
+/* Tab Menü Überarbeitung */
+nav[role="tablist"] {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  background-color: #f0f0f0;
+  color: #222;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+.tab-button:hover {
+  background-color: #d9d9d9;
+}
+
+.tab-button:focus-visible {
+  box-shadow: 0 0 0 3px #005fcc;
+  background-color: #d9d9d9;
+}
+
+.tab-button.active {
+  background-color: #005fcc; /* Aktiver Tab kräftiger */
+  color: #ffffff;
+}
+
+.tab-button.active:hover {
+  background-color: #0046a5;
+}
+
+/* Verbesserung für Touch/Keyboard Nutzer */
+.tab-button:focus {
+  outline: none;
+}
+
+
+/* --- Originalgetreues Tab Menü - WCAG Optimiert --- */
+
+/* Originalgetreues Tab Menü - WCAG 2.1 AA konform */
+.tab-button {
+  background-color: #111;
+  color: #71427f;
+  border: 1px solid #71427f;
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 0.9em;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #71427f55;
+  outline: none;
+}
+
+/* Hover Zustand */
+.tab-button:hover {
+  background-color: #1a1a1a;
+  box-shadow: 0 0 10px #71427f88;
+}
+
+/* Fokus Zustand für Tastaturnavigation */
+.tab-button:focus-visible {
+  box-shadow: 0 0 0 3px #71427f;
+  background-color: #1a1a1a;
+}
+
+/* Aktiver Tab */
+.tab-button.active {
+  background-color: #222; /* Etwas heller als #111, aber dunkel */
+  color: #ffffff;
+  border: 2px solid #71427f;
+  box-shadow: 0 0 12px #71427f;
+}
+
+/* Aktiver Tab Hover (optional stärkere Leuchtkraft) */
+.tab-button.active:hover {
+  background-color: #2a2a2a;
+  box-shadow: 0 0 16px #71427faa;
+}

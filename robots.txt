@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://deine-domain.de/sitemap.xml

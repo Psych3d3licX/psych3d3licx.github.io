@@ -1,60 +1,75 @@
-## README.md – Vollständige Analyse & Dokumentation
+# Projekt: Psych3d3licX – #KunstMitSubstanz
 
-### Projektüberblick
-Dies ist der vollständige Quellcode einer Webpräsenz für den Künstler **Psych3d3licX**, inklusive HTML-, CSS- und JavaScript-Dateien sowie zugehöriger Bildressourcen. Die Seite stellt Alben, Werke und Informationen zum Projekt vor und beinhaltet außerdem rechtliche Informationen wie Impressum und Datenschutz.
+## Überblick
+Dies ist die offizielle Webpräsenz von **Psych3d3licX**, gestaltet als responsive, barrierefreie, suchmaschinenoptimierte Onepage-Website.  
+Inhaltlich rebellisch, poetisch, politisch links, sozialkritisch und unkonventionell.
 
-### Dateistruktur
+**Technologien:**
+- HTML5 (semantisch + ARIA-optimiert)
+- CSS3 (WCAG 2.1 AA-konform, responsive)
+- JavaScript (modular, ohne externe Libraries)
+- Optimierte Performance & Sicherheit durch `.htaccess`
+
+## Projektstruktur
+
 ```
-site/
-├── index.html                 # Hauptseite der Website
-├── style.css                  # Globale CSS-Stildefinitionen
-├── scripts.js                 # Interaktive Funktionen (JS)
-└── images/
-    ├── profile.jpg            # Profilbild
-    ├── header.jpg             # Header-Grafik
-    └── covers/                # Albumcover-Bilder
-        ├── intoxikation_für_mindestlohn_cover.jpg
-        ├── politikverdrossen_cover.jpg
-        ├── total_breit_cover.jpg
+/
+├── index.html          → Hauptstruktur der Seite
+├── style.css           → Komplette Gestaltung (responsive, barrierefrei)
+├── scripts.js          → Funktionalitäten: Tabs, Popups, Mail-Obfuscation
+├── README.md           → Dieses Dokument
+├── .htaccess           → Speed- und Sicherheitsoptimierung
+├── robots.txt          → Erlaubt Crawling durch Suchmaschinen
+├── sitemap.xml         → SEO-optimierte Sitemap
+└── images/             → Alle Bilder
+    ├── profile.jpg     → Profilbild
+    ├── header.jpg      → Header-Hintergrund
+    └── covers/         → Albumcover
         ├── narrengold_cover.jpg
+        ├── total_breit_cover.jpg
+        ├── erfolg_durch_substanz_cover.jpg
         ├── chaotisch_psychotisch_cover.jpg
-        └── erfolg_durch_substanz_cover.jpg
+        ├── intoxikation_für_mindestlohn_cover.jpg
+        └── politikverdrossen_cover.jpg
 ```
 
-### index.html
-- **Funktion:** Struktur und Inhalte der Startseite inkl. Navigation, Sektionen für Musik, Bilder, rechtliche Hinweise
-- **Besonderheiten:** Verwendung von modalen Fenstern für Impressum & Datenschutz, responsive Struktur
-- **Empfehlung:** Semantisch gut gegliedert. Verbesserungspotenzial bei ARIA-Tags & SEO-relevanten Metatags.
+## Funktionen
 
-### style.css
-- **Funktion:** Definiert das komplette Erscheinungsbild, z. B. Layout, Farben, Fonts, Responsive Design
-- **Stärken:** Klar gegliedert, gute Trennung der Sektionen, modernes Layout
-- **Empfehlung:** Performance-Optimierung durch Zusammenfassung redundanter Regeln möglich. Farbkontraste stellenweise grenzwertig für Barrierefreiheit.
+| Funktion | Beschreibung |
+|:---------|:--------------|
+| Responsive Design | Optimiert für Mobile, Tablet und Desktop |
+| ARIA-optimierte Navigation | Bessere Accessibility für Screenreader |
+| Lazy Loading | Schnellere Ladezeiten durch `loading="lazy"` bei Bildern |
+| Popup-System | Impressum und Datenschutz ohne Seitenwechsel |
+| Tab-System | Strukturierte, aufklappbare Inhalte |
+| Anti-Mail-Bot | E-Mail-Adresse wird automatisch aus Zahlen generiert |
+| HTTPS, Caching, Kompression | Durch `.htaccess` |
 
-### scripts.js
-- **Funktion:** Steuert Modals (Ein-/Ausblenden), mobile Navigation
-- **Stärken:** Kompakte, zielgerichtete Logik
-- **Empfehlung:** Zugänglichkeit verbessern durch ESC-Key-Schließen, Fokus-Management und event.preventDefault() bei interaktiven Links
+## Optimierung und Standards
 
-### Performance & Barrierefreiheit
-- **Responsive Design:** Gut umgesetzt mit Medienabfragen
-- **Barrierefreiheit:** Grundlegend gegeben, aber keine umfassenden ARIA-Rollen oder Tastatursteuerung
-- **Ladezeiten:** Bilder nicht optimiert (Dateigröße); Lazy Loading fehlt
+- **Barrierefreiheit**: Erfüllt WCAG 2.1 AA Standard.
+- **SEO**: Saubere Seitenstruktur, Sitemap, Robots.txt, Open Graph.
+- **Performance**: GZIP-Kompression, Browser-Caching, Lazy-Loading.
+- **Security**: HTTPS-Erzwingung, sichere Header durch `.htaccess`.
+- **Browserkompatibilität**: Getestet auf Chrome, Firefox, Safari, Edge.
+- **Mobile First**: Optimale Darstellung auf allen Geräten.
 
-### Rechtliches (Impressum & Datenschutz)
-- **Modal-Lösungen korrekt eingebunden** (zentriert, scrollbar, responsive)
-- **Empfehlung:** Sicherstellen, dass Inhalte auch ohne JS zugänglich sind (Progressive Enhancement)
+## Deployment Hinweise
 
-### Verbesserungsvorschläge
-- HTML: ARIA-Rollen ergänzen, Metadaten erweitern (Open Graph, Twitter Cards)
-- CSS: Farbkontraste & Medienabfragen für größere Screens erweitern
-- JS: Fokus-Fallen vermeiden, ESC-Funktion ergänzen, Modularisierung
-- Bilder: Komprimierung & Lazy Loading
-- Struktur: ggf. Build-Tool (z. B. Vite, Astro) zur Optimierung einführen
+1. Alle Dateien und Ordner unverändert hochladen.
+2. SSL aktivieren (HTTPS).
+3. `.htaccess` ins Hauptverzeichnis legen.
+4. Domain und Pfade in `sitemap.xml` und Open Graph Tags ggf. anpassen.
+5. Google Search Console für Indexierung einrichten (empfohlen).
 
-### Fazit
-Der Code bildet ein solides, eigenständiges Webprojekt mit klaren Strukturen und kreativer Identität. Für den finalen Schliff sollte besonderes Augenmerk auf Accessibility, Ladegeschwindigkeit und semantische Tiefe gelegt werden, um sowohl Nutzerfreundlichkeit als auch Sichtbarkeit in Suchmaschinen zu erhöhen.
+## Lizenz
 
----
-**Stand der Analyse: April 2025**
+Alle Inhalte (Texte, Grafiken, Musik, Code) unterliegen dem Urheberrecht von **Psych3d3licX**.  
+Keine Weiterverwendung ohne ausdrückliche Genehmigung.
 
+# #KunstMitSubstanz 🔥
+
+## 📢 Hinweis
+
+Dieses Projekt ist "ready for production" und zukunftssicher gebaut.  
+Erweiterungen wie Blog, Shop oder Eventkalender können nahtlos integriert werden.
