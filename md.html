@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Anzeige – Gesamtbewertungen</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #f8f9fa;
+      color: #222;
+    }
+    h1, h2, h3 {
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+    pre, code {
+      background: #eee;
+      padding: 0.5rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main id="content">
+    <p><em>Lade Inhalte...</em></p>
+  </main>
+
+  <script>
+    // Pfad zu deinem Markdown-File
+    const markdownFile = 'bewertungen.md';
+
+    fetch(markdownFile)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Markdown-Datei konnte nicht geladen werden.');
+        }
+        return response.text();
+      })
+      .then(markdown => {
+        document.getElementById('content').innerHTML = marked.parse(markdown);
+      })
+      .catch(error => {
+        document.getElementById('content').innerHTML = '<p><strong>Fehler beim Laden der Datei:</strong> ' + error.message + '</p>';
+      });
+  </script>
+</body>
+</html>
+
